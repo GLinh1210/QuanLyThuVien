@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien
 {
-    partial class Form1
+    partial class fLogin
     {
         /// <summary>
         /// Required designer variable.
