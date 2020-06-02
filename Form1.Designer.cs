@@ -31,7 +31,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lvDanhSach = new System.Windows.Forms.ListView();
             this.btExit = new System.Windows.Forms.Button();
             this.btChoMuon = new System.Windows.Forms.Button();
             this.btMuonMoi = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.label17 = new System.Windows.Forms.Label();
             this.btThoat = new System.Windows.Forms.Button();
             this.btLuu = new System.Windows.Forms.Button();
@@ -77,6 +75,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.GVMuonSach = new System.Windows.Forms.DataGridView();
+            this.GVTraSach = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -85,6 +85,8 @@
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVMuonSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVTraSach)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -116,22 +118,13 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lvDanhSach);
+            this.groupBox4.Controls.Add(this.GVMuonSach);
             this.groupBox4.Location = new System.Drawing.Point(13, 258);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(793, 134);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách cho mượn";
-            // 
-            // lvDanhSach
-            // 
-            this.lvDanhSach.HideSelection = false;
-            this.lvDanhSach.Location = new System.Drawing.Point(12, 22);
-            this.lvDanhSach.Name = "lvDanhSach";
-            this.lvDanhSach.Size = new System.Drawing.Size(759, 100);
-            this.lvDanhSach.TabIndex = 0;
-            this.lvDanhSach.UseCompatibleStateImageBehavior = false;
             // 
             // btExit
             // 
@@ -181,6 +174,7 @@
             // 
             // dtNgayTra
             // 
+            this.dtNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayTra.Location = new System.Drawing.Point(135, 186);
             this.dtNgayTra.Name = "dtNgayTra";
             this.dtNgayTra.Size = new System.Drawing.Size(127, 20);
@@ -189,6 +183,7 @@
             // 
             // dtNgayMuon
             // 
+            this.dtNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNgayMuon.Location = new System.Drawing.Point(135, 148);
             this.dtNgayMuon.Name = "dtNgayMuon";
             this.dtNgayMuon.Size = new System.Drawing.Size(127, 20);
@@ -399,22 +394,13 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.listView2);
+            this.groupBox5.Controls.Add(this.GVTraSach);
             this.groupBox5.Location = new System.Drawing.Point(14, 290);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(790, 118);
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách trả sách";
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(11, 23);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(765, 94);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
             // 
             // label17
             // 
@@ -570,6 +556,22 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã độc giả";
             // 
+            // GVMuonSach
+            // 
+            this.GVMuonSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVMuonSach.Location = new System.Drawing.Point(6, 19);
+            this.GVMuonSach.Name = "GVMuonSach";
+            this.GVMuonSach.Size = new System.Drawing.Size(646, 115);
+            this.GVMuonSach.TabIndex = 1;
+            // 
+            // GVTraSach
+            // 
+            this.GVTraSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVTraSach.Location = new System.Drawing.Point(17, 24);
+            this.GVTraSach.Name = "GVTraSach";
+            this.GVTraSach.Size = new System.Drawing.Size(653, 93);
+            this.GVTraSach.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +580,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -590,6 +593,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GVMuonSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVTraSach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,9 +628,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListView lvDanhSach;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btLuu;
@@ -645,6 +648,8 @@
         private System.Windows.Forms.DateTimePicker dtTra;
         private System.Windows.Forms.DateTimePicker dtHan;
         private System.Windows.Forms.DateTimePicker dtMuon;
+        private System.Windows.Forms.DataGridView GVMuonSach;
+        private System.Windows.Forms.DataGridView GVTraSach;
     }
 }
 
