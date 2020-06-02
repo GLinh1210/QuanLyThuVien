@@ -16,5 +16,32 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Bạn có muốn thoát không?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        
+        }
+
+        private void btnDN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDK_Click(object sender, EventArgs e)
+        {
+            fDangky dk = new fDangky();
+            this.Hide();
+            dk.ShowDialog();
+            this.Show();
+        }
     }
 }
