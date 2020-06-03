@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Configuration;
 namespace QuanLyThuVien
 {
-    public partial class Form1 : Form
+    public partial class MuonTraSach : Form
     {
         SqlConnection connection;
         SqlCommand command;
@@ -28,10 +28,14 @@ namespace QuanLyThuVien
             adapter.Fill(table);
             GVMuonSach.DataSource = table;
         }
-       
-        public Form1()
+        void loaddata1()
         {
-            InitializeComponent();
+            command = connection.CreateCommand();
+            command.CommandText = " select * from PHIEUTRA ";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            GVTraSach.DataSource = table;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +43,17 @@ namespace QuanLyThuVien
             connection = new SqlConnection(str);
             connection.Open();
             loaddata();
+            loaddata1();
+
 
         }
+
+
+        public MuonTraSach()
+        {
+            InitializeComponent();
+        }
+  
+
     }
 }
