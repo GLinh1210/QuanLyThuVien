@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyThuVien.BUS;
+using QuanLyThuVien.DAO;
 
 namespace QuanLyThuVien
 {
     public partial class fLogin : Form
     {
+        DangNhap_BUS dnBUS = new DangNhap_BUS();
         public fLogin()
         {
             InitializeComponent();
@@ -33,6 +36,18 @@ namespace QuanLyThuVien
 
         private void btnDN_Click(object sender, EventArgs e)
         {
+            if (dnBUS.DangNhap(txtDN.Text, txtMK.Text) == true)
+            {
+                TrangChu tc = new TrangChu();
+                this.Hide();
+                tc.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+            }
+            
 
         }
 

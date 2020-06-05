@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessData.cs" />
+    <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="DAO\DangNhap_DAO.cs" />
+    <Compile Include="DAO\DataProvier.cs" />
+    <Compile Include="DTO\DangNhap_DTO.cs" />
     <Compile Include="fDangky.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fDangky.Designer.cs">
       <DependentUpon>fDangky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGiaoDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGiaoDien.Designer.cs">
+      <DependentUpon>fGiaoDien.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -57,12 +67,19 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemTraDN.cs" />
-    <Compile Include="Ngay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fDangky.resx">
       <DependentUpon>fDangky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGiaoDien.resx">
+      <DependentUpon>fGiaoDien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -75,7 +92,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,7 +108,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh11.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

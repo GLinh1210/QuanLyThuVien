@@ -11,13 +11,13 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void Dispose (bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            base.Dispose (disposing);
         }
 
         #region Windows Form Designer generated code
@@ -58,7 +58,6 @@
             this.btnDK1.TabIndex = 6;
             this.btnDK1.Text = "Đăng ký";
             this.btnDK1.UseVisualStyleBackColor = true;
-            this.btnDK1.Click += new System.EventHandler(this.btnDK1_Click);
             // 
             // btnThoat1
             // 
