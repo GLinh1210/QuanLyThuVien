@@ -15,9 +15,7 @@ namespace QuanLyThuVien
         public fGiaoDien()
         {
             InitializeComponent();
-            Form f = new Form();
-            f.Parent = this;
-            f.Show();
+            
 
         }
 
@@ -26,5 +24,7 @@ namespace QuanLyThuVien
             this.DialogResult = DialogResult.OK;
             timer1.Enabled = false;
         }
+
+        
     }
 }

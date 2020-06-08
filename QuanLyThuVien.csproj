@@ -45,9 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DangKy_BUS.cs" />
     <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="DAO\DangKy_DAO.cs" />
     <Compile Include="DAO\DangNhap_DAO.cs" />
     <Compile Include="DAO\DataProvier.cs" />
+    <Compile Include="DTO\DangKy_DTO.cs" />
     <Compile Include="DTO\DangNhap_DTO.cs" />
     <Compile Include="fDangky.cs">
       <SubType>Form</SubType>
@@ -120,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anh11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

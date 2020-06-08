@@ -18,6 +18,7 @@ namespace QuanLyThuVien
         public fLogin()
         {
             InitializeComponent();
+         
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

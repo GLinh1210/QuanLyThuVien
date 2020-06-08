@@ -36,28 +36,29 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lbTieuDe
             // 
             this.lbTieuDe.BackColor = System.Drawing.Color.Transparent;
             this.lbTieuDe.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.lbTieuDe.ForeColor = System.Drawing.Color.Black;
             this.lbTieuDe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbTieuDe.Location = new System.Drawing.Point(28, 115);
+            this.lbTieuDe.Location = new System.Drawing.Point(-2, 119);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(899, 112);
+            this.lbTieuDe.Size = new System.Drawing.Size(952, 140);
             this.lbTieuDe.TabIndex = 1;
-            this.lbTieuDe.Text = "Chào Mừng Đến Với Phần Mềm Quản Lý Thư Viện";
-            this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTieuDe.Text = " Chào Mừng Đến Với Phần Mềm Quản Lý Thư Viện ";
+            this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // fGiaoDien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources.anh1;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources.anh2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(951, 549);
             this.Controls.Add(this.lbTieuDe);
