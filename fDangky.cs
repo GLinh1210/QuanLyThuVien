@@ -50,35 +50,26 @@ namespace QuanLyThuVien
 
         private void btnDK1_Click(object sender, EventArgs e)
         {
-            if (txthoten.Text == "")
+            if (txthoten.Text == "" || txtTendn.Text == "" || txtPass.Text == "" || txtDiachi.Text == "" || DTNamsinh.Text == "" || (rbtnNam.Checked == false) && (rbtnNu.Checked == false))
             {
-                MessageBox.Show("Bạn chưa nhập họ tên!");
-                txthoten.Focus();
+                MessageBox.Show("Bạn phải nhập đầy đủ thông tin!");
+                
             }
-            else if (txtTendn.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập tên đăng nhập!");
-                txtTendn.Focus();
-            }
-            else if (txtPass.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập mật khẩu!");
-                txtPass.Focus();
-            }
-            else if (txtDiachi.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập địa chỉ!");
-                txtDiachi.Focus();
-            }
-            else if (DTNamsinh.Text == "")
-            {
-                MessageBox.Show("Bạn chưa chọn năm sinh!");
-                DTNamsinh.Focus();
-            }
-            if ((rbtnNam.Checked == false) && (rbtnNu.Checked == true))
-                MessageBox.Show("Bạn chưa chọn giới tính!");
-            Random rdm = new Random();
-            string n = rdm.Next(100, 999).ToString();
+            Random rd = new Random();
+            dnDTO.MaDocGia = rd.Next(100, 999).ToString();
+            dnDTO.MatKhau = txtPass.Text;
+            dnDTO.TenDangNhap = txtTendn.Text;
+            dkDTO.HoTen = txthoten.Text;
+            dkDTO.DiaChi = txtDiachi.Text;
+            if (rbtnNam.Checked == true)
+                dkDTO.GioiTinh = "Nam  ";
+            else if (rbtnNu.Checked == true)
+                dkDTO.GioiTinh = "Nữ   ";
+
+            if (DTNamsinh.Text == "")
+                dkDTO.NamSinh = DateTime.Now;
+            else
+                dkDTO.NamSinh = DTNamsinh.Value;
             
             bool kthoa = false;
             for (int i = 0; i < txtPass.Text.Length; i++)
@@ -88,22 +79,9 @@ namespace QuanLyThuVien
                     kthoa = true;
                 }
             }
-            if (kthoa == true)
+            if (kthoa == true && txtPass.Text != "")
             {
-                dnDTO.MatKhau = txtPass.Text;
-                dnDTO.MaDocGia = n;
-                dnDTO.TenDangNhap = txtTendn.Text;
-                dkDTO.HoTen = txthoten.Text;
-                dkDTO.DiaChi = txtDiachi.Text;
-                if (rbtnNam.Checked == true)
-                    dkDTO.GioiTinh = "Nam  ";
-                else if (rbtnNu.Checked == true)
-                    dkDTO.GioiTinh = "Nữ   ";
-
-                if (DTNamsinh.Text == "")
-                    dkDTO.NamSinh = DateTime.Now;
-                else
-                    dkDTO.NamSinh = DTNamsinh.Value;
+                
 
                 if ((_dk.Them(dnDTO, dkDTO)) == true)
                     MessageBox.Show("Thêm thành công. Quay lại trang Login để đăng nhập!");
@@ -120,11 +98,6 @@ namespace QuanLyThuVien
 
             }
             
-        }
-
-        private void fDangky_Load(object sender, EventArgs e)
-        {
-           
         }
         private void ResetForm()
         {

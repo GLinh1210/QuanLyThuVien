@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnDN = new System.Windows.Forms.Button();
             this.lbMK = new System.Windows.Forms.Label();
             this.lbDN = new System.Windows.Forms.Label();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtDN = new System.Windows.Forms.TextBox();
             this.btnDK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,26 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(485, 302);
             this.panel1.TabIndex = 0;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(275, 213);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(165, 70);
-            this.btnThoat.TabIndex = 5;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnDN
-            // 
-            this.btnDN.Location = new System.Drawing.Point(36, 213);
-            this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(165, 70);
-            this.btnDN.TabIndex = 4;
-            this.btnDN.Text = "Đăng nhập";
-            this.btnDN.UseVisualStyleBackColor = true;
-            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
             // lbMK
             // 
@@ -131,6 +111,28 @@
             this.pictureBox1.Size = new System.Drawing.Size(165, 138);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackgroundImage = global::QuanLyThuVien.Properties.Resources.power_512;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat.Location = new System.Drawing.Point(347, 201);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(93, 82);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnDN
+            // 
+            this.btnDN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDN.BackgroundImage")));
+            this.btnDN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDN.Location = new System.Drawing.Point(117, 201);
+            this.btnDN.Name = "btnDN";
+            this.btnDN.Size = new System.Drawing.Size(91, 82);
+            this.btnDN.TabIndex = 4;
+            this.btnDN.UseVisualStyleBackColor = true;
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
             // fLogin
             // 

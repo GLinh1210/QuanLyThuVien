@@ -57,7 +57,7 @@ namespace QuanLyThuVien
             fDangky dk = new fDangky();
             this.Hide();
             dk.ShowDialog();
-            this.Show();
+            //this.Show();
         }
     }
 }

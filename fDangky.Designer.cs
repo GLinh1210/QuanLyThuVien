@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDK1 = new System.Windows.Forms.Button();
-            this.btnThoat1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -45,31 +44,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTenDG = new System.Windows.Forms.Label();
+            this.btnThoat1 = new System.Windows.Forms.Button();
+            this.btnDK1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnDK1
-            // 
-            this.btnDK1.Location = new System.Drawing.Point(32, 480);
-            this.btnDK1.Name = "btnDK1";
-            this.btnDK1.Size = new System.Drawing.Size(165, 70);
-            this.btnDK1.TabIndex = 6;
-            this.btnDK1.Text = "Đăng ký";
-            this.btnDK1.UseVisualStyleBackColor = true;
-            this.btnDK1.Click += new System.EventHandler(this.btnDK1_Click);
-            // 
-            // btnThoat1
-            // 
-            this.btnThoat1.Location = new System.Drawing.Point(529, 480);
-            this.btnThoat1.Name = "btnThoat1";
-            this.btnThoat1.Size = new System.Drawing.Size(165, 70);
-            this.btnThoat1.TabIndex = 7;
-            this.btnThoat1.Text = "Quay Lại";
-            this.btnThoat1.UseVisualStyleBackColor = true;
-            this.btnThoat1.Click += new System.EventHandler(this.btnThoat1_Click);
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtPass);
@@ -89,6 +71,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 445);
             this.panel2.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(225, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(199, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Mật khẩu phải gồm 1 ký tự in hoa !!!";
             // 
             // label5
             // 
@@ -131,7 +124,7 @@
             this.DTNamsinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTNamsinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTNamsinh.Location = new System.Drawing.Point(228, 307);
-            this.DTNamsinh.MaxDate = new System.DateTime(2020, 6, 8, 16, 23, 38, 0);
+            this.DTNamsinh.MaxDate = new System.DateTime(2020, 6, 9, 14, 42, 56, 0);
             this.DTNamsinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.DTNamsinh.Name = "DTNamsinh";
             this.DTNamsinh.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -139,7 +132,7 @@
             this.DTNamsinh.TabIndex = 16;
             this.DTNamsinh.TabStop = false;
             this.DTNamsinh.UseWaitCursor = true;
-            this.DTNamsinh.Value = new System.DateTime(2020, 6, 8, 0, 0, 0, 0);
+            this.DTNamsinh.Value = new System.DateTime(2020, 6, 9, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -148,7 +141,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(322, 49);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Điền form đăng ký";
+            this.label6.Text = "Điền Form Đăng Ký";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rbtnNu
@@ -229,6 +222,31 @@
             this.lbTenDG.Text = "Họ và Tên:";
             this.lbTenDG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnThoat1
+            // 
+            this.btnThoat1.BackgroundImage = global::QuanLyThuVien.Properties.Resources._3;
+            this.btnThoat1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThoat1.Location = new System.Drawing.Point(442, 480);
+            this.btnThoat1.Name = "btnThoat1";
+            this.btnThoat1.Size = new System.Drawing.Size(100, 87);
+            this.btnThoat1.TabIndex = 7;
+            this.btnThoat1.UseVisualStyleBackColor = true;
+            this.btnThoat1.Click += new System.EventHandler(this.btnThoat1_Click);
+            // 
+            // btnDK1
+            // 
+            this.btnDK1.BackgroundImage = global::QuanLyThuVien.Properties.Resources.images2;
+            this.btnDK1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDK1.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDK1.ForeColor = System.Drawing.Color.Black;
+            this.btnDK1.Location = new System.Drawing.Point(157, 480);
+            this.btnDK1.Name = "btnDK1";
+            this.btnDK1.Size = new System.Drawing.Size(102, 87);
+            this.btnDK1.TabIndex = 6;
+            this.btnDK1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDK1.UseVisualStyleBackColor = true;
+            this.btnDK1.Click += new System.EventHandler(this.btnDK1_Click);
+            // 
             // fDangky
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,7 +258,6 @@
             this.Name = "fDangky";
             this.Text = "fDangky";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fDangky_FormClosing);
-            this.Load += new System.EventHandler(this.fDangky_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -266,5 +283,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -11,8 +11,8 @@ namespace QuanLyThuVien.DAO
 {
     class DangKy_DAO : DataProvier
     {
-       
 
+        
         public bool Insert(DangNhap_DTO dn, DangKy_DTO dk )
         {
             
