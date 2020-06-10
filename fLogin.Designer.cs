@@ -85,7 +85,10 @@
             this.btnThoat.BackColor = System.Drawing.Color.Transparent;
             this.btnThoat.BackgroundImage = global::QuanLyThuVien.Properties.Resources.power_512;
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Location = new System.Drawing.Point(356, 241);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(93, 82);
@@ -98,7 +101,8 @@
             this.btnDN.BackColor = System.Drawing.Color.Transparent;
             this.btnDN.BackgroundImage = global::QuanLyThuVien.Properties.Resources.computer_icons_login_tilted_planet_ltd_user_png_favpng_RGYzgs9WVdX8t8SXdj0y9KKwm;
             this.btnDN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDN.FlatAppearance.BorderSize = 0;
+            this.btnDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDN.Location = new System.Drawing.Point(140, 241);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(91, 82);
