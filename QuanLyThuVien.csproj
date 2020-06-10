@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,16 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MuonTraSach.cs">
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="PhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MuonTraSach.Designer.cs">
-      <DependentUpon>MuonTraSach.cs</DependentUpon>
+    <Compile Include="PhieuMuon.Designer.cs">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTra.Designer.cs">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MuonTraSach.resx">
-      <DependentUpon>MuonTraSach.cs</DependentUpon>
+    <EmbeddedResource Include="PhieuMuon.resx">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTra.resx">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
