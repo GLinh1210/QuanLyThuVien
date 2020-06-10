@@ -32,6 +32,8 @@ namespace QuanLyThuVien
             {
                 e.Cancel = true;
             }
+            fDangky dk = new fDangky();
+            dk.Close();
         
         }
 
@@ -42,7 +44,7 @@ namespace QuanLyThuVien
                 TrangChu tc = new TrangChu();
                 this.Hide();
                 tc.ShowDialog();
-                this.Show();
+                
             }
             else
             {
@@ -57,7 +59,7 @@ namespace QuanLyThuVien
             fDangky dk = new fDangky();
             this.Hide();
             dk.ShowDialog();
-            //this.Show();
+            
         }
     }
 }

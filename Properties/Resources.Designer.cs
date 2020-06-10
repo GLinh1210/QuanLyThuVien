@@ -63,6 +63,36 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_17259_list_add_clip_art_add_image_button_png {
+            get {
+                object obj = ResourceManager.GetObject("1-17259_list-add-clip-art-add-image-button-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_3oNgt5C2JC5FucjUm2SPxg_696x464 {
+            get {
+                object obj = ResourceManager.GetObject("1-3oNgt5C2JC5FucjUm2SPxg-696x464", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _126794 {
+            get {
+                object obj = ResourceManager.GetObject("126794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
@@ -76,6 +106,16 @@ namespace QuanLyThuVien.Properties {
         internal static System.Drawing.Bitmap _31 {
             get {
                 object obj = ResourceManager.GetObject("31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _48c6384f542319b0a28d7059e5c500fd {
+            get {
+                object obj = ResourceManager.GetObject("48c6384f542319b0a28d7059e5c500fd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +173,26 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computer_icons_login_tilted_planet_ltd_user_png_favpng_RGYzgs9WVdX8t8SXdj0y9KKwm {
+            get {
+                object obj = ResourceManager.GetObject("computer-icons-login-tilted-planet-ltd-user-png-favpng-RGYzgs9WVdX8t8SXdj0y9KKwm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_powerpoint_don_gian_dep_1 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-powerpoint-don-gian-dep-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -173,9 +233,40 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_64 {
+            get {
+                object obj = ResourceManager.GetObject("Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-" +
+                        "icons-search-symbol-find-magnifying-glass-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap power_512 {
             get {
                 object obj = ResourceManager.GetObject("power-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap public_cart_button_03_hi {
+            get {
+                object obj = ResourceManager.GetObject("public-cart-button-03-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_full_512 {
+            get {
+                object obj = ResourceManager.GetObject("trash-full-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

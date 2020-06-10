@@ -182,6 +182,33 @@
   <ItemGroup>
     <None Include="Resources\images2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-3oNgt5C2JC5FucjUm2SPxg-696x464.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\public-cart-button-03-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-17259_list-add-clip-art-add-image-button-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-full-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-icons-search-symbol-find-magnifying-glass-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48c6384f542319b0a28d7059e5c500fd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-icons-login-tilted-planet-ltd-user-png-favpng-RGYzgs9WVdX8t8SXdj0y9KKwm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-powerpoint-don-gian-dep-1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

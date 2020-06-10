@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtgSach = new System.Windows.Forms.DataGridView();
+            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.theLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nhaXuatBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
             this.lbSach = new System.Windows.Forms.Label();
             this.lbTens = new System.Windows.Forms.Label();
             this.lbTacgia = new System.Windows.Forms.Label();
@@ -39,39 +49,29 @@
             this.lbSL = new System.Windows.Forms.Label();
             this.lbTT = new System.Windows.Forms.Label();
             this.QuanLySach = new System.Windows.Forms.Panel();
-            this.TimSach = new System.Windows.Forms.Panel();
-            this.txtMasach = new System.Windows.Forms.TextBox();
-            this.txtTensach = new System.Windows.Forms.TextBox();
-            this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtNXB = new System.Windows.Forms.TextBox();
-            this.txtTacgia = new System.Windows.Forms.TextBox();
-            this.cbTheloai = new System.Windows.Forms.ComboBox();
-            this.cbTT = new System.Windows.Forms.ComboBox();
             this.nbSL = new System.Windows.Forms.NumericUpDown();
+            this.cbTT = new System.Windows.Forms.ComboBox();
+            this.cbTheloai = new System.Windows.Forms.ComboBox();
+            this.txtTacgia = new System.Windows.Forms.TextBox();
+            this.txtNXB = new System.Windows.Forms.TextBox();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.txtTensach = new System.Windows.Forms.TextBox();
+            this.txtMasach = new System.Windows.Forms.TextBox();
+            this.TimSach = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.lbTim = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
-            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.theLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhaXuatBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSach)).BeginInit();
-            this.QuanLySach.SuspendLayout();
-            this.TimSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            this.QuanLySach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbSL)).BeginInit();
+            this.TimSach.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgSach
@@ -96,6 +96,66 @@
             this.dtgSach.Size = new System.Drawing.Size(1094, 234);
             this.dtgSach.TabIndex = 0;
             this.dtgSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSach_CellContentClick);
+            // 
+            // maSachDataGridViewTextBoxColumn
+            // 
+            this.maSachDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
+            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
+            this.maSachDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // tenSachDataGridViewTextBoxColumn
+            // 
+            this.tenSachDataGridViewTextBoxColumn.DataPropertyName = "TenSach";
+            this.tenSachDataGridViewTextBoxColumn.HeaderText = "Tên Sách";
+            this.tenSachDataGridViewTextBoxColumn.Name = "tenSachDataGridViewTextBoxColumn";
+            // 
+            // tacGiaDataGridViewTextBoxColumn
+            // 
+            this.tacGiaDataGridViewTextBoxColumn.DataPropertyName = "TacGia";
+            this.tacGiaDataGridViewTextBoxColumn.HeaderText = "Tác Giả";
+            this.tacGiaDataGridViewTextBoxColumn.Name = "tacGiaDataGridViewTextBoxColumn";
+            // 
+            // theLoaiDataGridViewTextBoxColumn
+            // 
+            this.theLoaiDataGridViewTextBoxColumn.DataPropertyName = "TheLoai";
+            this.theLoaiDataGridViewTextBoxColumn.HeaderText = "Thể Loại";
+            this.theLoaiDataGridViewTextBoxColumn.Name = "theLoaiDataGridViewTextBoxColumn";
+            // 
+            // nhaXuatBanDataGridViewTextBoxColumn
+            // 
+            this.nhaXuatBanDataGridViewTextBoxColumn.DataPropertyName = "NhaXuatBan";
+            this.nhaXuatBanDataGridViewTextBoxColumn.HeaderText = "Nhà Xuất Bản";
+            this.nhaXuatBanDataGridViewTextBoxColumn.Name = "nhaXuatBanDataGridViewTextBoxColumn";
+            // 
+            // giaSachDataGridViewTextBoxColumn
+            // 
+            this.giaSachDataGridViewTextBoxColumn.DataPropertyName = "GiaSach";
+            this.giaSachDataGridViewTextBoxColumn.HeaderText = "Giá Sách";
+            this.giaSachDataGridViewTextBoxColumn.Name = "giaSachDataGridViewTextBoxColumn";
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
+            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình Trạng";
+            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbSach
             // 
@@ -204,58 +264,24 @@
             this.QuanLySach.Size = new System.Drawing.Size(685, 331);
             this.QuanLySach.TabIndex = 9;
             // 
-            // TimSach
+            // nbSL
             // 
-            this.TimSach.BackColor = System.Drawing.Color.LavenderBlush;
-            this.TimSach.Controls.Add(this.btnTim);
-            this.TimSach.Controls.Add(this.label1);
-            this.TimSach.Controls.Add(this.txtTim);
-            this.TimSach.Controls.Add(this.lbTim);
-            this.TimSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimSach.Location = new System.Drawing.Point(691, 1);
-            this.TimSach.Name = "TimSach";
-            this.TimSach.Size = new System.Drawing.Size(394, 331);
-            this.TimSach.TabIndex = 9;
+            this.nbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbSL.Location = new System.Drawing.Point(486, 124);
+            this.nbSL.Name = "nbSL";
+            this.nbSL.Size = new System.Drawing.Size(120, 23);
+            this.nbSL.TabIndex = 15;
             // 
-            // txtMasach
+            // cbTT
             // 
-            this.txtMasach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMasach.Location = new System.Drawing.Point(132, 30);
-            this.txtMasach.Name = "txtMasach";
-            this.txtMasach.Size = new System.Drawing.Size(159, 23);
-            this.txtMasach.TabIndex = 0;
-            // 
-            // txtTensach
-            // 
-            this.txtTensach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTensach.Location = new System.Drawing.Point(132, 77);
-            this.txtTensach.Name = "txtTensach";
-            this.txtTensach.Size = new System.Drawing.Size(177, 23);
-            this.txtTensach.TabIndex = 9;
-            // 
-            // txtGia
-            // 
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(486, 77);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(159, 23);
-            this.txtGia.TabIndex = 10;
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNXB.Location = new System.Drawing.Point(132, 169);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Size = new System.Drawing.Size(159, 23);
-            this.txtNXB.TabIndex = 11;
-            // 
-            // txtTacgia
-            // 
-            this.txtTacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTacgia.Location = new System.Drawing.Point(132, 211);
-            this.txtTacgia.Name = "txtTacgia";
-            this.txtTacgia.Size = new System.Drawing.Size(159, 23);
-            this.txtTacgia.TabIndex = 12;
+            this.cbTT.FormattingEnabled = true;
+            this.cbTT.Items.AddRange(new object[] {
+            "Còn",
+            "Hết"});
+            this.cbTT.Location = new System.Drawing.Point(486, 30);
+            this.cbTT.Name = "cbTT";
+            this.cbTT.Size = new System.Drawing.Size(159, 24);
+            this.cbTT.TabIndex = 14;
             // 
             // cbTheloai
             // 
@@ -282,24 +308,68 @@
             this.cbTheloai.Size = new System.Drawing.Size(159, 24);
             this.cbTheloai.TabIndex = 13;
             // 
-            // cbTT
+            // txtTacgia
             // 
-            this.cbTT.FormattingEnabled = true;
-            this.cbTT.Items.AddRange(new object[] {
-            "Còn",
-            "Hết"});
-            this.cbTT.Location = new System.Drawing.Point(486, 30);
-            this.cbTT.Name = "cbTT";
-            this.cbTT.Size = new System.Drawing.Size(159, 24);
-            this.cbTT.TabIndex = 14;
+            this.txtTacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTacgia.Location = new System.Drawing.Point(132, 211);
+            this.txtTacgia.Name = "txtTacgia";
+            this.txtTacgia.Size = new System.Drawing.Size(159, 23);
+            this.txtTacgia.TabIndex = 12;
             // 
-            // nbSL
+            // txtNXB
             // 
-            this.nbSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbSL.Location = new System.Drawing.Point(486, 124);
-            this.nbSL.Name = "nbSL";
-            this.nbSL.Size = new System.Drawing.Size(120, 23);
-            this.nbSL.TabIndex = 15;
+            this.txtNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNXB.Location = new System.Drawing.Point(132, 169);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.Size = new System.Drawing.Size(159, 23);
+            this.txtNXB.TabIndex = 11;
+            // 
+            // txtGia
+            // 
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGia.Location = new System.Drawing.Point(486, 77);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(159, 23);
+            this.txtGia.TabIndex = 10;
+            // 
+            // txtTensach
+            // 
+            this.txtTensach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTensach.Location = new System.Drawing.Point(132, 77);
+            this.txtTensach.Name = "txtTensach";
+            this.txtTensach.Size = new System.Drawing.Size(177, 23);
+            this.txtTensach.TabIndex = 9;
+            // 
+            // txtMasach
+            // 
+            this.txtMasach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMasach.Location = new System.Drawing.Point(132, 30);
+            this.txtMasach.Name = "txtMasach";
+            this.txtMasach.Size = new System.Drawing.Size(159, 23);
+            this.txtMasach.TabIndex = 0;
+            // 
+            // TimSach
+            // 
+            this.TimSach.BackColor = System.Drawing.Color.LavenderBlush;
+            this.TimSach.Controls.Add(this.btnTim);
+            this.TimSach.Controls.Add(this.label1);
+            this.TimSach.Controls.Add(this.txtTim);
+            this.TimSach.Controls.Add(this.lbTim);
+            this.TimSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimSach.Location = new System.Drawing.Point(691, 1);
+            this.TimSach.Name = "TimSach";
+            this.TimSach.Size = new System.Drawing.Size(394, 331);
+            this.TimSach.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 29);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tìm Sách ";
             // 
             // txtTim
             // 
@@ -319,123 +389,65 @@
             this.lbTim.TabIndex = 3;
             this.lbTim.Text = "Mã Sách : ";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 29);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tìm Sách ";
-            // 
-            // btnTim
-            // 
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(161, 199);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(93, 44);
-            this.btnTim.TabIndex = 12;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(67, 258);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(93, 44);
-            this.btnThem.TabIndex = 16;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(248, 258);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(93, 44);
-            this.btnSua.TabIndex = 17;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(426, 258);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(93, 44);
-            this.btnXoa.TabIndex = 18;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // sACHTableAdapter
             // 
             this.sACHTableAdapter.ClearBeforeFill = true;
             // 
-            // maSachDataGridViewTextBoxColumn
+            // btnTim
             // 
-            this.maSachDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
-            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
-            this.maSachDataGridViewTextBoxColumn.Width = 88;
+            this.btnTim.BackColor = System.Drawing.Color.Transparent;
+            this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_64;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Location = new System.Drawing.Point(317, 97);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(55, 46);
+            this.btnTim.TabIndex = 12;
+            this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // tenSachDataGridViewTextBoxColumn
+            // btnXoa
             // 
-            this.tenSachDataGridViewTextBoxColumn.DataPropertyName = "TenSach";
-            this.tenSachDataGridViewTextBoxColumn.HeaderText = "Tên Sách";
-            this.tenSachDataGridViewTextBoxColumn.Name = "tenSachDataGridViewTextBoxColumn";
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BackgroundImage = global::QuanLyThuVien.Properties.Resources.trash_full_512;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(466, 258);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(70, 54);
+            this.btnXoa.TabIndex = 18;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // tacGiaDataGridViewTextBoxColumn
+            // btnSua
             // 
-            this.tacGiaDataGridViewTextBoxColumn.DataPropertyName = "TacGia";
-            this.tacGiaDataGridViewTextBoxColumn.HeaderText = "Tác Giả";
-            this.tacGiaDataGridViewTextBoxColumn.Name = "tacGiaDataGridViewTextBoxColumn";
+            this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.BackgroundImage = global::QuanLyThuVien.Properties.Resources._126794;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(300, 258);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(76, 54);
+            this.btnSua.TabIndex = 17;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // theLoaiDataGridViewTextBoxColumn
+            // btnThem
             // 
-            this.theLoaiDataGridViewTextBoxColumn.DataPropertyName = "TheLoai";
-            this.theLoaiDataGridViewTextBoxColumn.HeaderText = "Thể Loại";
-            this.theLoaiDataGridViewTextBoxColumn.Name = "theLoaiDataGridViewTextBoxColumn";
-            // 
-            // nhaXuatBanDataGridViewTextBoxColumn
-            // 
-            this.nhaXuatBanDataGridViewTextBoxColumn.DataPropertyName = "NhaXuatBan";
-            this.nhaXuatBanDataGridViewTextBoxColumn.HeaderText = "Nhà Xuất Bản";
-            this.nhaXuatBanDataGridViewTextBoxColumn.Name = "nhaXuatBanDataGridViewTextBoxColumn";
-            // 
-            // giaSachDataGridViewTextBoxColumn
-            // 
-            this.giaSachDataGridViewTextBoxColumn.DataPropertyName = "GiaSach";
-            this.giaSachDataGridViewTextBoxColumn.HeaderText = "Giá Sách";
-            this.giaSachDataGridViewTextBoxColumn.Name = "giaSachDataGridViewTextBoxColumn";
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
-            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            // 
-            // tinhTrangDataGridViewTextBoxColumn
-            // 
-            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
-            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình Trạng";
-            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            this.btnThem.BackColor = System.Drawing.Color.Transparent;
+            this.btnThem.BackgroundImage = global::QuanLyThuVien.Properties.Resources._1_17259_list_add_clip_art_add_image_button_png;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(132, 258);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(69, 54);
+            this.btnThem.TabIndex = 16;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // fSach
             // 
@@ -450,13 +462,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fSach_FormClosing);
             this.Load += new System.EventHandler(this.fSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             this.QuanLySach.ResumeLayout(false);
             this.QuanLySach.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbSL)).EndInit();
             this.TimSach.ResumeLayout(false);
             this.TimSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
