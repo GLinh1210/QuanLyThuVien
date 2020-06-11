@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaPhieu = new System.Windows.Forms.TextBox();
-            this.txtMaDG = new System.Windows.Forms.TextBox();
-            this.txtMaSach = new System.Windows.Forms.TextBox();
             this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
             this.BtXoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,8 +41,19 @@
             this.BtThem = new System.Windows.Forms.Button();
             this.BtCapNhat = new System.Windows.Forms.Button();
             this.BtNhapLai = new System.Windows.Forms.Button();
+            this.BtSua = new System.Windows.Forms.Button();
+            this.cbMaDG = new System.Windows.Forms.ComboBox();
+            this.cbMaSach = new System.Windows.Forms.ComboBox();
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,20 +98,6 @@
             this.txtMaPhieu.Name = "txtMaPhieu";
             this.txtMaPhieu.Size = new System.Drawing.Size(160, 20);
             this.txtMaPhieu.TabIndex = 4;
-            // 
-            // txtMaDG
-            // 
-            this.txtMaDG.Location = new System.Drawing.Point(134, 92);
-            this.txtMaDG.Name = "txtMaDG";
-            this.txtMaDG.Size = new System.Drawing.Size(160, 20);
-            this.txtMaDG.TabIndex = 5;
-            // 
-            // txtMaSach
-            // 
-            this.txtMaSach.Location = new System.Drawing.Point(134, 134);
-            this.txtMaSach.Name = "txtMaSach";
-            this.txtMaSach.Size = new System.Drawing.Size(160, 20);
-            this.txtMaSach.TabIndex = 6;
             // 
             // dtNgayTra
             // 
@@ -168,19 +164,74 @@
             this.BtNhapLai.UseVisualStyleBackColor = true;
             this.BtNhapLai.Click += new System.EventHandler(this.BtNhapLai_Click);
             // 
+            // BtSua
+            // 
+            this.BtSua.Location = new System.Drawing.Point(385, 12);
+            this.BtSua.Name = "BtSua";
+            this.BtSua.Size = new System.Drawing.Size(136, 49);
+            this.BtSua.TabIndex = 15;
+            this.BtSua.Text = "Sửa";
+            this.BtSua.UseVisualStyleBackColor = true;
+            // 
+            // cbMaDG
+            // 
+            this.cbMaDG.DataSource = this.dOCGIABindingSource;
+            this.cbMaDG.DisplayMember = "MaDocGia";
+            this.cbMaDG.FormattingEnabled = true;
+            this.cbMaDG.Location = new System.Drawing.Point(134, 91);
+            this.cbMaDG.Name = "cbMaDG";
+            this.cbMaDG.Size = new System.Drawing.Size(154, 21);
+            this.cbMaDG.TabIndex = 16;
+            this.cbMaDG.ValueMember = "MaDocGia";
+            // 
+            // cbMaSach
+            // 
+            this.cbMaSach.DataSource = this.sACHBindingSource;
+            this.cbMaSach.DisplayMember = "MaSach";
+            this.cbMaSach.FormattingEnabled = true;
+            this.cbMaSach.Location = new System.Drawing.Point(134, 137);
+            this.cbMaSach.Name = "cbMaSach";
+            this.cbMaSach.Size = new System.Drawing.Size(154, 21);
+            this.cbMaSach.TabIndex = 17;
+            this.cbMaSach.ValueMember = "MaSach";
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataMember = "DOCGIA";
+            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // dOCGIATableAdapter
+            // 
+            this.dOCGIATableAdapter.ClearBeforeFill = true;
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // sACHTableAdapter
+            // 
+            this.sACHTableAdapter.ClearBeforeFill = true;
+            // 
             // PhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbMaSach);
+            this.Controls.Add(this.cbMaDG);
+            this.Controls.Add(this.BtSua);
             this.Controls.Add(this.BtNhapLai);
             this.Controls.Add(this.BtCapNhat);
             this.Controls.Add(this.BtThem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtXoa);
             this.Controls.Add(this.dtNgayTra);
-            this.Controls.Add(this.txtMaSach);
-            this.Controls.Add(this.txtMaDG);
             this.Controls.Add(this.txtMaPhieu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -191,6 +242,9 @@
             this.Load += new System.EventHandler(this.PhieuTra_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +257,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMaPhieu;
-        private System.Windows.Forms.TextBox txtMaDG;
-        private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.DateTimePicker dtNgayTra;
         private System.Windows.Forms.Button BtXoa;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -212,5 +264,13 @@
         private System.Windows.Forms.Button BtThem;
         private System.Windows.Forms.Button BtCapNhat;
         private System.Windows.Forms.Button BtNhapLai;
+        private System.Windows.Forms.Button BtSua;
+        private System.Windows.Forms.ComboBox cbMaDG;
+        private System.Windows.Forms.ComboBox cbMaSach;
+        private QuanLyThuVienDataSet quanLyThuVienDataSet;
+        private System.Windows.Forms.BindingSource dOCGIABindingSource;
+        private QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter dOCGIATableAdapter;
+        private System.Windows.Forms.BindingSource sACHBindingSource;
+        private QuanLyThuVienDataSetTableAdapters.SACHTableAdapter sACHTableAdapter;
     }
 }

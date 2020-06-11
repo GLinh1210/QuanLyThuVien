@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtMaPhieu = new System.Windows.Forms.TextBox();
-            this.TxtMaSach = new System.Windows.Forms.TextBox();
-            this.TxtMaDG = new System.Windows.Forms.TextBox();
             this.dtNgayMuon = new System.Windows.Forms.DateTimePicker();
             this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
             this.BtXoa = new System.Windows.Forms.Button();
@@ -44,8 +43,19 @@
             this.BtThem = new System.Windows.Forms.Button();
             this.BtCapNhat = new System.Windows.Forms.Button();
             this.BtNhapLai = new System.Windows.Forms.Button();
+            this.cbMaDG = new System.Windows.Forms.ComboBox();
+            this.cbMaSach = new System.Windows.Forms.ComboBox();
+            this.BtSua = new System.Windows.Forms.Button();
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,20 +109,6 @@
             this.TxtMaPhieu.Name = "TxtMaPhieu";
             this.TxtMaPhieu.Size = new System.Drawing.Size(165, 20);
             this.TxtMaPhieu.TabIndex = 6;
-            // 
-            // TxtMaSach
-            // 
-            this.TxtMaSach.Location = new System.Drawing.Point(109, 109);
-            this.TxtMaSach.Name = "TxtMaSach";
-            this.TxtMaSach.Size = new System.Drawing.Size(165, 20);
-            this.TxtMaSach.TabIndex = 8;
-            // 
-            // TxtMaDG
-            // 
-            this.TxtMaDG.Location = new System.Drawing.Point(109, 72);
-            this.TxtMaDG.Name = "TxtMaDG";
-            this.TxtMaDG.Size = new System.Drawing.Size(165, 20);
-            this.TxtMaDG.TabIndex = 9;
             // 
             // dtNgayMuon
             // 
@@ -186,11 +182,69 @@
             this.BtNhapLai.UseVisualStyleBackColor = true;
             this.BtNhapLai.Click += new System.EventHandler(this.BtNhapLai_Click);
             // 
+            // cbMaDG
+            // 
+            this.cbMaDG.DataSource = this.dOCGIABindingSource;
+            this.cbMaDG.DisplayMember = "MaDocGia";
+            this.cbMaDG.FormattingEnabled = true;
+            this.cbMaDG.Location = new System.Drawing.Point(109, 72);
+            this.cbMaDG.Name = "cbMaDG";
+            this.cbMaDG.Size = new System.Drawing.Size(162, 21);
+            this.cbMaDG.TabIndex = 19;
+            this.cbMaDG.ValueMember = "MaDocGia";
+            // 
+            // cbMaSach
+            // 
+            this.cbMaSach.DataSource = this.sACHBindingSource;
+            this.cbMaSach.DisplayMember = "MaSach";
+            this.cbMaSach.FormattingEnabled = true;
+            this.cbMaSach.Location = new System.Drawing.Point(112, 112);
+            this.cbMaSach.Name = "cbMaSach";
+            this.cbMaSach.Size = new System.Drawing.Size(162, 21);
+            this.cbMaSach.TabIndex = 20;
+            this.cbMaSach.ValueMember = "MaSach";
+            // 
+            // BtSua
+            // 
+            this.BtSua.Location = new System.Drawing.Point(434, 202);
+            this.BtSua.Name = "BtSua";
+            this.BtSua.Size = new System.Drawing.Size(119, 59);
+            this.BtSua.TabIndex = 21;
+            this.BtSua.Text = "Sửa";
+            this.BtSua.UseVisualStyleBackColor = true;
+            this.BtSua.Click += new System.EventHandler(this.BtSua_Click);
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataMember = "DOCGIA";
+            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // dOCGIATableAdapter
+            // 
+            this.dOCGIATableAdapter.ClearBeforeFill = true;
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // sACHTableAdapter
+            // 
+            this.sACHTableAdapter.ClearBeforeFill = true;
+            // 
             // PhieuMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 450);
+            this.Controls.Add(this.BtSua);
+            this.Controls.Add(this.cbMaSach);
+            this.Controls.Add(this.cbMaDG);
             this.Controls.Add(this.BtNhapLai);
             this.Controls.Add(this.BtCapNhat);
             this.Controls.Add(this.BtThem);
@@ -198,8 +252,6 @@
             this.Controls.Add(this.BtXoa);
             this.Controls.Add(this.dtNgayTra);
             this.Controls.Add(this.dtNgayMuon);
-            this.Controls.Add(this.TxtMaDG);
-            this.Controls.Add(this.TxtMaSach);
             this.Controls.Add(this.TxtMaPhieu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -211,6 +263,9 @@
             this.Load += new System.EventHandler(this.PhieuMuon_Load_1);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,8 +279,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtMaPhieu;
-        private System.Windows.Forms.TextBox TxtMaSach;
-        private System.Windows.Forms.TextBox TxtMaDG;
         private System.Windows.Forms.DateTimePicker dtNgayMuon;
         private System.Windows.Forms.DateTimePicker dtNgayTra;
         private System.Windows.Forms.Button BtXoa;
@@ -234,5 +287,13 @@
         private System.Windows.Forms.Button BtThem;
         private System.Windows.Forms.Button BtCapNhat;
         private System.Windows.Forms.Button BtNhapLai;
+        private System.Windows.Forms.ComboBox cbMaDG;
+        private System.Windows.Forms.ComboBox cbMaSach;
+        private System.Windows.Forms.Button BtSua;
+        private QuanLyThuVienDataSet quanLyThuVienDataSet;
+        private System.Windows.Forms.BindingSource dOCGIABindingSource;
+        private QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter dOCGIATableAdapter;
+        private System.Windows.Forms.BindingSource sACHBindingSource;
+        private QuanLyThuVienDataSetTableAdapters.SACHTableAdapter sACHTableAdapter;
     }
 }

@@ -1,96 +1,99 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyThuVien.BUS;
+using QuanLyThuVien.DTO;
 namespace QuanLyThuVien
 {
     public partial class PhieuTra : Form
     {
-        string str = @"Data Source=DESKTOP-8MH1NJR\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
 
         public PhieuTra()
         {
             InitializeComponent();
         }
-        public void load()
-        {
-            SqlConnection conn = new SqlConnection(str);
-            try
-            {
-                conn.Open();
-                string sql = "select*from PHIEUTRA";
-                SqlDataAdapter dt = new SqlDataAdapter(sql, conn);
-                DataTable tb = new DataTable();
-                dt.Fill(tb);
-                dataGridView2.DataSource = tb;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối" + ex.Message);
-            }
-        }
+        PhieuTra_BUS PTBUS = new PhieuTra_BUS();
+
+
 
         private void PhieuTra_Load(object sender, EventArgs e)
         {
-            load();
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.SACH' table. You can move, or remove it, as needed.
+            this.sACHTableAdapter.Fill(this.quanLyThuVienDataSet.SACH);
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.DOCGIA' table. You can move, or remove it, as needed.
+            this.dOCGIATableAdapter.Fill(this.quanLyThuVienDataSet.DOCGIA);
+            dataGridView2.DataSource = PTBUS.GetList();
         }
+    
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
             i = dataGridView2.CurrentRow.Index;
             txtMaPhieu.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
-            txtMaDG.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
-            txtMaSach.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+            cbMaDG.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+            cbMaSach.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
             dtNgayTra.Text = dataGridView2.Rows[i].Cells[3].Value.ToString();
+        }
+        private void ResetGridview()
+        {
+            txtMaPhieu.ResetText();
+            cbMaDG.ResetText();
+            cbMaSach.ResetText();
+            dtNgayTra.ResetText();
+
         }
 
         private void BtNhapLai_Click(object sender, EventArgs e)
         {
             txtMaPhieu.Clear();
-            txtMaDG.Clear();
-            txtMaSach.Clear();
+
 
         }
 
         private void BtCapNhat_Click(object sender, EventArgs e)
         {
-            load();
+
         }
 
         private void BtThem_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(str);
-            try
+            if (txtMaPhieu.Text == "" || cbMaDG.Text == "" || cbMaSach.Text == "")
             {
-                if (txtMaPhieu.Text != "" && txtMaDG.Text != "" && txtMaSach.Text != "")
+                MessageBox.Show("Phải điền đủ thông tin!!!");
+            }
+            else
+            {
+                PhieuTra_DTO t = new PhieuTra_DTO();
+                if (txtMaPhieu.Text == t.MaPhieu)
                 {
-                    conn.Open();
-                    string sql = "INSERT INTO PHIEUTRA values('" + txtMaPhieu + "','" + txtMaDG + "','" + txtMaSach + "','" + dtNgayTra + "')";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    int kq = (int)cmd.ExecuteNonQuery();
-                    if (kq > 0)
-                    {
-                        MessageBox.Show("Thêm thành công");
-                        load();
-
-                    }
-                    else
-                        MessageBox.Show("Thêm thất bại");
-                    conn.Close();
+                    MessageBox.Show("Mã sách đã tồn tại!!!");
+                    txtMaPhieu.ResetText();
+                    txtMaPhieu.Focus();
                 }
                 else
-                    MessageBox.Show("Chưa nhập đủ thông tin");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối" + ex.Message);
+                {
+                    t.MaPhieu = txtMaPhieu.Text;
+                    t.MaDocGia = cbMaDG.Text;
+                    t.MaSach = cbMaSach.Text;
+
+                    int check = PTBUS.Them(t);
+                    if (check == 0)
+                        MessageBox.Show("Thêm không thành công !!!");
+                    else if (check == -1)
+                        MessageBox.Show("Thêm sách thành công");
+
+                    PhieuTra_Load(sender, e);
+                    ResetGridview();
+                }
             }
         }
 
@@ -100,15 +103,18 @@ namespace QuanLyThuVien
             thongbao = MessageBox.Show("Bạn có muốn xóa hay không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (thongbao == DialogResult.OK)
             {
-                SqlConnection conn = new SqlConnection(str);
-                conn.Open();
-                string sql = "delete from PHIEUTRA where MaDocGia '" + txtMaDG + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa thành công");
-                load();
-                conn.Close();
+                if (txtMaPhieu.Text != "")
+                {
+                    PTBUS.Xoa(txtMaPhieu.Text);
+                    ResetGridview();
+                    PhieuTra_Load(sender, e);
+                };
             }
         }
     }
 }
+        
+            
+
+
+       
