@@ -39,20 +39,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.BtThem = new System.Windows.Forms.Button();
-            this.BtCapNhat = new System.Windows.Forms.Button();
             this.BtNhapLai = new System.Windows.Forms.Button();
             this.BtSua = new System.Windows.Forms.Button();
             this.cbMaDG = new System.Windows.Forms.ComboBox();
-            this.cbMaSach = new System.Windows.Forms.ComboBox();
-            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
+            this.cbMaSach = new System.Windows.Forms.ComboBox();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
             this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,16 +143,6 @@
             this.BtThem.UseVisualStyleBackColor = true;
             this.BtThem.Click += new System.EventHandler(this.BtThem_Click);
             // 
-            // BtCapNhat
-            // 
-            this.BtCapNhat.Location = new System.Drawing.Point(323, 154);
-            this.BtCapNhat.Name = "BtCapNhat";
-            this.BtCapNhat.Size = new System.Drawing.Size(136, 49);
-            this.BtCapNhat.TabIndex = 13;
-            this.BtCapNhat.Text = "Cập nhật";
-            this.BtCapNhat.UseVisualStyleBackColor = true;
-            this.BtCapNhat.Click += new System.EventHandler(this.BtCapNhat_Click);
-            // 
             // BtNhapLai
             // 
             this.BtNhapLai.Location = new System.Drawing.Point(323, 81);
@@ -166,7 +155,7 @@
             // 
             // BtSua
             // 
-            this.BtSua.Location = new System.Drawing.Point(385, 12);
+            this.BtSua.Location = new System.Drawing.Point(323, 154);
             this.BtSua.Name = "BtSua";
             this.BtSua.Size = new System.Drawing.Size(136, 49);
             this.BtSua.TabIndex = 15;
@@ -184,6 +173,16 @@
             this.cbMaDG.TabIndex = 16;
             this.cbMaDG.ValueMember = "MaDocGia";
             // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataMember = "DOCGIA";
+            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbMaSach
             // 
             this.cbMaSach.DataSource = this.sACHBindingSource;
@@ -195,24 +194,14 @@
             this.cbMaSach.TabIndex = 17;
             this.cbMaSach.ValueMember = "MaSach";
             // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOCGIABindingSource
-            // 
-            this.dOCGIABindingSource.DataMember = "DOCGIA";
-            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
-            // dOCGIATableAdapter
-            // 
-            this.dOCGIATableAdapter.ClearBeforeFill = true;
-            // 
             // sACHBindingSource
             // 
             this.sACHBindingSource.DataMember = "SACH";
             this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // dOCGIATableAdapter
+            // 
+            this.dOCGIATableAdapter.ClearBeforeFill = true;
             // 
             // sACHTableAdapter
             // 
@@ -227,7 +216,6 @@
             this.Controls.Add(this.cbMaDG);
             this.Controls.Add(this.BtSua);
             this.Controls.Add(this.BtNhapLai);
-            this.Controls.Add(this.BtCapNhat);
             this.Controls.Add(this.BtThem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtXoa);
@@ -239,11 +227,12 @@
             this.Controls.Add(this.label1);
             this.Name = "PhieuTra";
             this.Text = "PhieuTra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhieuTra_FormClosing);
             this.Load += new System.EventHandler(this.PhieuTra_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,7 +251,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button BtThem;
-        private System.Windows.Forms.Button BtCapNhat;
         private System.Windows.Forms.Button BtNhapLai;
         private System.Windows.Forms.Button BtSua;
         private System.Windows.Forms.ComboBox cbMaDG;

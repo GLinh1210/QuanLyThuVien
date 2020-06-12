@@ -146,5 +146,14 @@ namespace QuanLyThuVien
                 ResetGridview();
             }
         }
+
+        private void PhieuMuon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Bạn có muốn thoát không?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
