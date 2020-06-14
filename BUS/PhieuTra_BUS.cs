@@ -11,27 +11,27 @@ namespace QuanLyThuVien.BUS
 {
     class PhieuTra_BUS
     {
-        PhieuTra_DAO PTDAO = new PhieuTra_DAO();
+        PhieuTra_DAO traDAO = new PhieuTra_DAO();
         public DataTable GetList()
         {
-            return PTDAO.loadSach();
+            return traDAO.Phieutra();
         }
-        public void Xoa(string mt)
+        public void XoaB(string mt)
         {
-            PTDAO.Delete(mt);
+            traDAO.Xoa(mt);
         }
-        public bool Sua(PhieuTra_DTO t)
+        public bool SuaB(PhieuTra_DTO t)
         {
             if (string.IsNullOrEmpty(t.MaPhieu))
                 return false;
-            PTDAO.Update(t);
+            traDAO.Sua(t);
             return true;
         }
-        public int Them(PhieuTra_DTO t)
+        public int ThemB(PhieuTra_DTO t)
         {
             if (string.IsNullOrEmpty(t.MaPhieu))
                 return 0;
-            if (!PTDAO.Insert(t))
+            if (!traDAO.Them(t))
                 return -1;
             return 1;
         }

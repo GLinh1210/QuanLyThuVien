@@ -48,11 +48,18 @@
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
             this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
+            this.pHIEUTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pHIEUTRATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUTRATableAdapter();
+            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 99);
+            this.label2.Location = new System.Drawing.Point(51, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -95,7 +102,7 @@
             // 
             this.txtMaPhieu.Location = new System.Drawing.Point(134, 33);
             this.txtMaPhieu.Name = "txtMaPhieu";
-            this.txtMaPhieu.Size = new System.Drawing.Size(160, 20);
+            this.txtMaPhieu.Size = new System.Drawing.Size(154, 20);
             this.txtMaPhieu.TabIndex = 4;
             // 
             // dtNgayTra
@@ -107,12 +114,13 @@
             // 
             // BtXoa
             // 
-            this.BtXoa.Location = new System.Drawing.Point(474, 154);
+            this.BtXoa.BackColor = System.Drawing.Color.AliceBlue;
+            this.BtXoa.Location = new System.Drawing.Point(474, 137);
             this.BtXoa.Name = "BtXoa";
             this.BtXoa.Size = new System.Drawing.Size(136, 49);
             this.BtXoa.TabIndex = 10;
             this.BtXoa.Text = "Xóa";
-            this.BtXoa.UseVisualStyleBackColor = true;
+            this.BtXoa.UseVisualStyleBackColor = false;
             this.BtXoa.Click += new System.EventHandler(this.BtXoa_Click);
             // 
             // groupBox1
@@ -126,7 +134,14 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhieuDataGridViewTextBoxColumn,
+            this.maDocGiaDataGridViewTextBoxColumn,
+            this.maSachDataGridViewTextBoxColumn,
+            this.ngayTraDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.pHIEUTRABindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(21, 24);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(731, 97);
@@ -135,39 +150,43 @@
             // 
             // BtThem
             // 
-            this.BtThem.Location = new System.Drawing.Point(474, 81);
+            this.BtThem.BackColor = System.Drawing.Color.AliceBlue;
+            this.BtThem.Location = new System.Drawing.Point(474, 53);
             this.BtThem.Name = "BtThem";
             this.BtThem.Size = new System.Drawing.Size(136, 49);
             this.BtThem.TabIndex = 12;
             this.BtThem.Text = "Thêm";
-            this.BtThem.UseVisualStyleBackColor = true;
+            this.BtThem.UseVisualStyleBackColor = false;
             this.BtThem.Click += new System.EventHandler(this.BtThem_Click);
             // 
             // BtNhapLai
             // 
-            this.BtNhapLai.Location = new System.Drawing.Point(323, 81);
+            this.BtNhapLai.BackColor = System.Drawing.Color.AliceBlue;
+            this.BtNhapLai.Location = new System.Drawing.Point(323, 53);
             this.BtNhapLai.Name = "BtNhapLai";
             this.BtNhapLai.Size = new System.Drawing.Size(136, 49);
             this.BtNhapLai.TabIndex = 14;
             this.BtNhapLai.Text = "Nhập lại";
-            this.BtNhapLai.UseVisualStyleBackColor = true;
+            this.BtNhapLai.UseVisualStyleBackColor = false;
             this.BtNhapLai.Click += new System.EventHandler(this.BtNhapLai_Click);
             // 
             // BtSua
             // 
-            this.BtSua.Location = new System.Drawing.Point(323, 154);
+            this.BtSua.BackColor = System.Drawing.Color.AliceBlue;
+            this.BtSua.Location = new System.Drawing.Point(323, 137);
             this.BtSua.Name = "BtSua";
             this.BtSua.Size = new System.Drawing.Size(136, 49);
             this.BtSua.TabIndex = 15;
             this.BtSua.Text = "Sửa";
-            this.BtSua.UseVisualStyleBackColor = true;
+            this.BtSua.UseVisualStyleBackColor = false;
+            this.BtSua.Click += new System.EventHandler(this.BtSua_Click);
             // 
             // cbMaDG
             // 
             this.cbMaDG.DataSource = this.dOCGIABindingSource;
             this.cbMaDG.DisplayMember = "MaDocGia";
             this.cbMaDG.FormattingEnabled = true;
-            this.cbMaDG.Location = new System.Drawing.Point(134, 91);
+            this.cbMaDG.Location = new System.Drawing.Point(134, 81);
             this.cbMaDG.Name = "cbMaDG";
             this.cbMaDG.Size = new System.Drawing.Size(154, 21);
             this.cbMaDG.TabIndex = 16;
@@ -188,7 +207,7 @@
             this.cbMaSach.DataSource = this.sACHBindingSource;
             this.cbMaSach.DisplayMember = "MaSach";
             this.cbMaSach.FormattingEnabled = true;
-            this.cbMaSach.Location = new System.Drawing.Point(134, 137);
+            this.cbMaSach.Location = new System.Drawing.Point(134, 129);
             this.cbMaSach.Name = "cbMaSach";
             this.cbMaSach.Size = new System.Drawing.Size(154, 21);
             this.cbMaSach.TabIndex = 17;
@@ -207,10 +226,44 @@
             // 
             this.sACHTableAdapter.ClearBeforeFill = true;
             // 
+            // pHIEUTRABindingSource
+            // 
+            this.pHIEUTRABindingSource.DataMember = "PHIEUTRA";
+            this.pHIEUTRABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // pHIEUTRATableAdapter
+            // 
+            this.pHIEUTRATableAdapter.ClearBeforeFill = true;
+            // 
+            // maPhieuDataGridViewTextBoxColumn
+            // 
+            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            // 
+            // maDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaDocGia";
+            this.maDocGiaDataGridViewTextBoxColumn.HeaderText = "MaDocGia";
+            this.maDocGiaDataGridViewTextBoxColumn.Name = "maDocGiaDataGridViewTextBoxColumn";
+            // 
+            // maSachDataGridViewTextBoxColumn
+            // 
+            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.HeaderText = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
+            // 
+            // ngayTraDataGridViewTextBoxColumn
+            // 
+            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
+            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "NgayTra";
+            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
+            // 
             // PhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cbMaSach);
             this.Controls.Add(this.cbMaDG);
@@ -234,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +314,11 @@
         private QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter dOCGIATableAdapter;
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private QuanLyThuVienDataSetTableAdapters.SACHTableAdapter sACHTableAdapter;
+        private System.Windows.Forms.BindingSource pHIEUTRABindingSource;
+        private QuanLyThuVienDataSetTableAdapters.PHIEUTRATableAdapter pHIEUTRATableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhieuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maDocGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSachDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayTraDataGridViewTextBoxColumn;
     }
 }

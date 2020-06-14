@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,17 +14,19 @@ namespace QuanLyThuVien
 {
     public partial class PhieuTra : Form
     {
-
+        PhieuTra_BUS PTBUS = new PhieuTra_BUS();
         public PhieuTra()
         {
             InitializeComponent();
         }
-        PhieuTra_BUS PTBUS = new PhieuTra_BUS();
+      
 
 
 
         private void PhieuTra_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.PHIEUTRA' table. You can move, or remove it, as needed.
+            this.pHIEUTRATableAdapter.Fill(this.quanLyThuVienDataSet.PHIEUTRA);
             // TODO: This line of code loads data into the 'quanLyThuVienDataSet.SACH' table. You can move, or remove it, as needed.
             this.sACHTableAdapter.Fill(this.quanLyThuVienDataSet.SACH);
             // TODO: This line of code loads data into the 'quanLyThuVienDataSet.DOCGIA' table. You can move, or remove it, as needed.
@@ -55,7 +56,8 @@ namespace QuanLyThuVien
         private void BtNhapLai_Click(object sender, EventArgs e)
         {
             txtMaPhieu.Clear();
-
+            cbMaDG.ResetText();
+            cbMaSach.ResetText();
 
         }
 
@@ -66,35 +68,31 @@ namespace QuanLyThuVien
 
         private void BtThem_Click(object sender, EventArgs e)
         {
-            if (txtMaPhieu.Text == "" || cbMaDG.Text == "" || cbMaSach.Text == "")
+            PhieuTra_DTO pm = new PhieuTra_DTO();
+            if (txtMaPhieu.Text != "" && cbMaDG.Text != "" && cbMaSach.Text != "")
             {
-                MessageBox.Show("Phải điền đủ thông tin!!!");
+                pm.MaDocGia = cbMaDG.Text;
+                pm.MaPhieu = txtMaPhieu.Text;
+                pm.MaSach = cbMaSach.Text;
+                pm.NgayTra = dtNgayTra.Value;
+
+                int check = PTBUS.ThemB(pm);
+                if (check == 0)
+                {
+                    MessageBox.Show("Thêm không thành công");
+
+
+                }
+                else if (check == -1)
+                    MessageBox.Show("Thêm thành công");
+                BtNhapLai_Click(sender, e);
+                PhieuTra_Load(sender, e);
+
             }
             else
-            {
-                PhieuTra_DTO t = new PhieuTra_DTO();
-                if (txtMaPhieu.Text == t.MaPhieu)
-                {
-                    MessageBox.Show("Mã sách đã tồn tại!!!");
-                    txtMaPhieu.ResetText();
-                    txtMaPhieu.Focus();
-                }
-                else
-                {
-                    t.MaPhieu = txtMaPhieu.Text;
-                    t.MaDocGia = cbMaDG.Text;
-                    t.MaSach = cbMaSach.Text;
+                MessageBox.Show("Chưa nhập đủ thông tin");
 
-                    int check = PTBUS.Them(t);
-                    if (check == 0)
-                        MessageBox.Show("Thêm không thành công !!!");
-                    else if (check == -1)
-                        MessageBox.Show("Thêm sách thành công");
 
-                    PhieuTra_Load(sender, e);
-                    ResetGridview();
-                }
-            }
         }
 
         private void BtXoa_Click(object sender, EventArgs e)
@@ -105,7 +103,7 @@ namespace QuanLyThuVien
             {
                 if (txtMaPhieu.Text != "")
                 {
-                    PTBUS.Xoa(txtMaPhieu.Text);
+                    PTBUS.XoaB(txtMaPhieu.Text);
                     ResetGridview();
                     PhieuTra_Load(sender, e);
                 };
@@ -118,6 +116,39 @@ namespace QuanLyThuVien
             if (d == DialogResult.No)
             {
                 e.Cancel = true;
+            }
+        }
+
+        private void BtSua_Click(object sender, EventArgs e)
+        {
+            PhieuTra_DTO s = new PhieuTra_DTO();
+            if (txtMaPhieu.Text == "")
+            {
+                MessageBox.Show("Phải nhập mã phiếu muốn sửa!!!");
+                txtMaPhieu.Focus();
+            }
+            else
+            {
+                s.MaPhieu = txtMaPhieu.Text;
+            }
+            if (txtMaPhieu.Text == "" || cbMaDG.Text == "" || cbMaSach.Text == "")
+            {
+                MessageBox.Show("Phải nhập đầy đủ thông tin");
+            }
+            else
+            {
+
+                s.MaDocGia = cbMaDG.Text;
+                s.MaPhieu = txtMaPhieu.Text;
+                s.MaSach = cbMaSach.Text;
+                s.NgayTra = dtNgayTra.Value;
+
+                if (!PTBUS.SuaB(s))
+                    MessageBox.Show("Sửa không thành công!!!");
+                else
+                    MessageBox.Show("Sửa thành công");
+                BtNhapLai_Click(sender, e);
+                PhieuTra_Load(sender, e);
             }
         }
     }

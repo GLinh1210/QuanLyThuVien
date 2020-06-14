@@ -16,12 +16,26 @@ namespace QuanLyThuVien
 {
     public partial class PhieuMuon : Form
     {
-        
+        PhieuMuon_BUS muonBUS = new PhieuMuon_BUS();
+
+
         public PhieuMuon()
         {
             InitializeComponent();
         }
-        PhieuMuon_BUS PMBUS = new PhieuMuon_BUS();
+        private void PhieuMuon_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.PHIEUMUON' table. You can move, or remove it, as needed.
+            this.pHIEUMUONTableAdapter.Fill(this.quanLyThuVienDataSet.PHIEUMUON);
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.SACH' table. You can move, or remove it, as needed.
+            this.sACHTableAdapter.Fill(this.quanLyThuVienDataSet.SACH);
+            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.DOCGIA' table. You can move, or remove it, as needed.
+            this.dOCGIATableAdapter.Fill(this.quanLyThuVienDataSet.DOCGIA);
+            
+            dataGridView1.DataSource = muonBUS.GetList();
+
+        }
+
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,6 +60,8 @@ namespace QuanLyThuVien
         private void BtNhapLai_Click(object sender, EventArgs e)
         {
             TxtMaPhieu.Clear();
+            cbMaDG.ResetText();
+            cbMaSach.ResetText();
           
             
         }
@@ -57,39 +73,34 @@ namespace QuanLyThuVien
 
         private void BtThem_Click(object sender, EventArgs e)
         {
-            if (TxtMaPhieu.Text == "" || cbMaDG.Text == "" || cbMaSach.Text == "" )
+
+            PhieuMuon_DTO pm = new PhieuMuon_DTO();
+            if (TxtMaPhieu.Text != "" && cbMaDG.Text != "" && cbMaSach.Text != "")
             {
-                MessageBox.Show("Phải điền đủ thông tin!!!");
+                pm.MaDocGia = cbMaDG.Text;
+                pm.MaPhieu = TxtMaPhieu.Text;
+                pm.MaSach = cbMaSach.Text;
+                pm.NgayMuon = dtNgayMuon.Value;
+                pm.NgayPhaiTra = dtNgayTra.Value;
+
+                int check = muonBUS.ThemB(pm);
+                if (check == 0)
+                {
+                    MessageBox.Show("Thêm không thành công");
+
+
+                }
+                else if (check == -1)
+                    MessageBox.Show("Thêm thành công");
+                BtNhapLai_Click(sender, e);
+                PhieuMuon_Load_1(sender, e);
+
             }
             else
-            {
-                PhieuMuon_DTO m = new PhieuMuon_DTO();
-                if (TxtMaPhieu.Text == m.MaPhieu)
-                {
-                    MessageBox.Show("Mã sách đã tồn tại!!!");
-                    TxtMaPhieu.ResetText();
-                    TxtMaPhieu.Focus();
-                }
-                else
-                {
-                    m.MaPhieu = TxtMaPhieu.Text;
-                    m.MaDocGia = cbMaDG.Text;
-                    m.MaSach = cbMaSach.Text;
-                    m.NgayPhaiTra = dtNgayTra.Value;
-                    m.NgayMuon = dtNgayMuon.Value;
-                    
-                    int check = PMBUS.Them(m);
-                    if (check == 0)
-                        MessageBox.Show("Thêm không thành công !!!");
-                    else if (check == -1)
-                        MessageBox.Show("Thêm sách thành công");
+                MessageBox.Show("Chưa nhập đủ thông tin");
 
-                    PhieuMuon_Load_1(sender, e);
-                    ResetGridview();
-
-                }
-            }
-        }
+        
+    }
 
         
 
@@ -101,49 +112,46 @@ namespace QuanLyThuVien
             {
                 if (TxtMaPhieu.Text != "")
                 {
-                    PMBUS.Xoa(TxtMaPhieu.Text);
+                    muonBUS.XoaB(TxtMaPhieu.Text);
                     ResetGridview();
                     PhieuMuon_Load_1(sender, e);
                 };
             }    
         }
 
-        private void PhieuMuon_Load_1(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.SACH' table. You can move, or remove it, as needed.
-            this.sACHTableAdapter.Fill(this.quanLyThuVienDataSet.SACH);
-            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.DOCGIA' table. You can move, or remove it, as needed.
-            this.dOCGIATableAdapter.Fill(this.quanLyThuVienDataSet.DOCGIA);
-            dataGridView1.DataSource = PMBUS.GetList();
-        }
+       
 
         private void BtSua_Click(object sender, EventArgs e)
         {
-            PhieuMuon_DTO m = new PhieuMuon_DTO();
+            PhieuMuon_DTO s = new PhieuMuon_DTO();
             if (TxtMaPhieu.Text == "")
             {
-                MessageBox.Show("Phải nhập mã sách muốn sửa!!!");
+                MessageBox.Show("Phải nhập mã phiếu muốn sửa!!!");
                 TxtMaPhieu.Focus();
             }
             else
             {
-                m.MaPhieu = TxtMaPhieu.Text;
+                s.MaPhieu = TxtMaPhieu.Text;
             }
-            if (cbMaDG.Text == "" || cbMaSach.Text == "" || dtNgayMuon.Text == "" || dtNgayTra.Text == "")
+            if (TxtMaPhieu.Text == "" || cbMaDG.Text == "" || cbMaSach.Text == "")
             {
                 MessageBox.Show("Phải nhập đầy đủ thông tin");
             }
             else
             {
 
-                m.MaDocGia = cbMaDG.Text;
-                m.MaSach = cbMaSach.Text;
-                if (!PMBUS.Sua(m))
+                s.MaDocGia = cbMaDG.Text;
+                s.MaPhieu = TxtMaPhieu.Text;
+                s.MaSach = cbMaSach.Text;
+                s.NgayMuon = dtNgayMuon.Value;
+                s.NgayPhaiTra = dtNgayTra.Value;
+
+                if (!muonBUS.SuaB(s))
                     MessageBox.Show("Sửa không thành công!!!");
                 else
                     MessageBox.Show("Sửa thành công");
+                BtNhapLai_Click(sender, e);
                 PhieuMuon_Load_1(sender, e);
-                ResetGridview();
             }
         }
 

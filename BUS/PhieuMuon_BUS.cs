@@ -7,31 +7,32 @@ using QuanLyThuVien.DAO;
 using QuanLyThuVien.DTO;
 using System.Data;
 
+
 namespace QuanLyThuVien.BUS
 {
     class PhieuMuon_BUS
     {
-        PhieuMuon_DAO PMDAO = new PhieuMuon_DAO();
+        PhieuMuon_DAO muonDAO = new PhieuMuon_DAO();
         public DataTable GetList()
         {
-            return PMDAO.loadSach();
+            return muonDAO.Phieumuon();
         }
-        public void Xoa(string mt)
+        public void XoaB(string mt)
         {
-            PMDAO.Delete(mt);
+            muonDAO.Xoa(mt);
         }
-        public bool Sua(PhieuMuon_DTO m)
+        public bool SuaB(PhieuMuon_DTO m)
         {
             if (string.IsNullOrEmpty(m.MaPhieu))
                 return false;
-            PMDAO.Update(m);
+            muonDAO.Sua(m);
             return true;
         }
-        public int Them(PhieuMuon_DTO m)
+        public int ThemB(PhieuMuon_DTO m)
         {
             if (string.IsNullOrEmpty(m.MaPhieu))
                 return 0;
-            if (!PMDAO.Insert(m))
+            if (!muonDAO.Them(m))
                 return -1;
             return 1;
         }

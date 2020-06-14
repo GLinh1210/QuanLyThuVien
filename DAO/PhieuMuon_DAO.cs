@@ -3,35 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using QuanLyThuVien.DTO;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using QuanLyThuVien.DTO;
+
 
 namespace QuanLyThuVien.DAO
 {
-    class PhieuMuon_DAO: DataProvier
+    class PhieuMuon_DAO : DataProvier
     {
-        public DataTable loadSach()
+        public DataTable Phieumuon()
         {
             string sqlString = @"select * from PHIEUMUON";
             return GetData(sqlString);
         }
-        public bool Insert(PhieuMuon_DTO m)
+        public bool Them(PhieuMuon_DTO pm)
         {
-            if (GetData("select * from PHIEUMUON where MaPhieu = '" + m.MaPhieu + "'").Rows.Count > 0)
+            if (GetData("select* from PHIEUMUON where MaPhieu = '" + pm.MaPhieu + "'").Rows.Count > 0)
                 return false;
-            string sql = "insert into PHIEUMUON (MaPhieu, MaDocGia, MaSach, NgayMuon, NgayPhaiTra ) values('"+ m.MaPhieu + "','" + m.MaDocGia + "','" + m.MaSach + "','" + m.NgayMuon + "','" + m.NgayPhaiTra + "')"; 
+            string sql = "insert into PHIEUMUON (MaPhieu, MaDocGia, MaSach, NgayMuon, NgayPhaiTra ) values('" + pm.MaPhieu + "','" + pm.MaDocGia + "','" + pm.MaSach + "','" + pm.NgayMuon + "','" + pm.NgayPhaiTra + "')";
             Excute(sql);
+
             return true;
         }
-        public void Delete(string mt)
+        public void Xoa(string mp)
         {
-            Excute("delete from PHIEUMUON where MaPhieu = '" + mt + "'");
+            Excute("delete from PHIEUMUON where MaPhieu = '" + mp + "'");
+
+
         }
-        public void Update(PhieuMuon_DTO m)
+        public void Sua(PhieuMuon_DTO pm)
         {
-            string sql = string.Format("update PHIEUMUON set MaDocGia = N'{0}', MaSach = N'{1}', NgayMuon = N'{2}', NgayPhaiTra = N'{3}'",
-                m.MaDocGia, m.MaSach, m.NgayMuon, m.NgayPhaiTra);
+            string sql = string.Format("update PHIEUMUON set MaPhieu = '{0}', MaDocGia = '{1}', MaSach = '{2}', NgayMuon = '{3}', NgayPhaiTra = '{4}'",
+                pm.MaPhieu, pm.MaDocGia, pm.MaSach, pm.NgayMuon, pm.NgayPhaiTra);
             Excute(sql);
         }
 
