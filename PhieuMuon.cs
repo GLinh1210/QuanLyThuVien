@@ -25,13 +25,13 @@ namespace QuanLyThuVien
         }
         private void PhieuMuon_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyThuVienDataSet.PHIEUMUON' table. You can move, or remove it, as needed.
-            this.pHIEUMUONTableAdapter.Fill(this.quanLyThuVienDataSet.PHIEUMUON);
             // TODO: This line of code loads data into the 'quanLyThuVienDataSet.SACH' table. You can move, or remove it, as needed.
             this.sACHTableAdapter.Fill(this.quanLyThuVienDataSet.SACH);
             // TODO: This line of code loads data into the 'quanLyThuVienDataSet.DOCGIA' table. You can move, or remove it, as needed.
             this.dOCGIATableAdapter.Fill(this.quanLyThuVienDataSet.DOCGIA);
-            
+
+
+
             dataGridView1.DataSource = muonBUS.GetList();
 
         }

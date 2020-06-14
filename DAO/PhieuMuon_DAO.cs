@@ -34,8 +34,8 @@ namespace QuanLyThuVien.DAO
         }
         public void Sua(PhieuMuon_DTO pm)
         {
-            string sql = string.Format("update PHIEUMUON set MaPhieu = '{0}', MaDocGia = '{1}', MaSach = '{2}', NgayMuon = '{3}', NgayPhaiTra = '{4}'",
-                pm.MaPhieu, pm.MaDocGia, pm.MaSach, pm.NgayMuon, pm.NgayPhaiTra);
+            string sql = string.Format("update PHIEUMUON set MaDocGia = '{0}', MaSach = '{1}', NgayMuon = '{2}', NgayPhaiTra = '{3}' where MaPhieu = '{4}' ",
+                  pm.MaDocGia, pm.MaSach, pm.NgayMuon, pm.NgayPhaiTra, pm.MaPhieu);
             Excute(sql);
         }
 
