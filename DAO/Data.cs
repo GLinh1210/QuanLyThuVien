@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DAO
+namespace QuanLyThuVien.DAO
 {
-    class Data
+    public class DATA
     {
-        static string provider = @"Data Source=DESKTOP-QCN1M3M\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
-        SqlConnection connect = new SqlConnection(provider);
-
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-QCN1M3M\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
+   
         public DataTable GetData(string sql)
         {
+            
             DataTable rs = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, connect);
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, _conn);
             adapter.Fill(rs);
-            return rs;
+            return rs;  
         }
         public void Excute(string sql)
         {
-            connect.Open();
-            SqlCommand command = new SqlCommand(sql, connect);
+            _conn.Open();
+            SqlCommand command = new SqlCommand(sql, _conn);
             command.ExecuteNonQuery();
-            connect.Close();
+            _conn.Close();
+        }
+        public SqlDataReader ExecuteReader(string sql)
+        {
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(sql,_conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            return reader;
         }
     }
 }
