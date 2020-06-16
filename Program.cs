@@ -16,8 +16,13 @@ namespace QuanLyThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PhieuMuon());
-            //Application.Run(new PhieuTra());
+            //Application.Run(new TCS());
+            fGiaoDien f = new fGiaoDien();
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new fLogin());
+            }
         }
     }
 }
