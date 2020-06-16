@@ -103,6 +103,24 @@ namespace QuanLyThuVien
 
         }
 
+        private void btnMuon_Click(object sender, EventArgs e)
+        {
+            PhieuMuon tcs = new PhieuMuon();
+            this.Hide();
+            tcs.ShowDialog();
+            this.Show();
+
+        }
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            PhieuTra tcs = new PhieuTra();
+            this.Hide();
+            tcs.ShowDialog();
+            this.Show();
+
+        }
+
   
 
 
