@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 using QuanLyThuVien.DTO;
 using QuanLyThuVien.DAO;
 using System.Data;
-
+using System.Data.SqlClient;
 namespace QuanLyThuVien.BUS
 {
-    class DangKy_BUS
+    class TTMT_BUS
     {
-        DangKy_DAO dkDao = new DangKy_DAO();
+        TTMT_DAO mt = new TTMT_DAO();
 
-        public bool Them(Account_DTO dn, DocGia_DTO dk)
+        public DataTable PM(string tk)
         {
-            return dkDao.Insert(dn, dk);
+            return mt.PMu(tk);
         }
-       
+        public DataTable PT(string tk)
+        {
+            return mt.PTr(tk);
+        }
     }
-        
-    
 }

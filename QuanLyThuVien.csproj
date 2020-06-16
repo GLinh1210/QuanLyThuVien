@@ -47,13 +47,29 @@
   <ItemGroup>
     <Compile Include="BUS\DangKy_BUS.cs" />
     <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="BUS\DoiMK_BUS.cs" />
     <Compile Include="BUS\Sach_BUS.cs" />
+    <Compile Include="BUS\TrangChu_BUS.cs" />
+    <Compile Include="BUS\TS_BUS.cs" />
+    <Compile Include="BUS\TTMT_BUS.cs" />
     <Compile Include="DAO\DangKy_DAO.cs" />
     <Compile Include="DAO\DangNhap_DAO.cs" />
     <Compile Include="DAO\DataProvier.cs" />
+    <Compile Include="DAO\DoiMK_DAO.cs" />
     <Compile Include="DAO\Sach_DAO.cs" />
-    <Compile Include="DTO\DangKy_DTO.cs" />
-    <Compile Include="DTO\DangNhap_DTO.cs" />
+    <Compile Include="DAO\TrangChu_DAO.cs" />
+    <Compile Include="DAO\TS_DAO.cs" />
+    <Compile Include="DAO\TTMT_DAO.cs" />
+    <Compile Include="DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMK.Designer.cs">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DocGia_DTO.cs" />
+    <Compile Include="DTO\Account_DTO.cs" />
+    <Compile Include="DTO\PhieuMuon_DTO.cs" />
+    <Compile Include="DTO\PhieuTra_DTO.cs" />
     <Compile Include="DTO\Sach_DTO.cs" />
     <Compile Include="fDangky.cs">
       <SubType>Form</SubType>
@@ -91,12 +107,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCS.Designer.cs">
+      <DependentUpon>TCS.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="TTMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTMT.Designer.cs">
+      <DependentUpon>TTMT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoiMK.resx">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDangky.resx">
       <DependentUpon>fDangky.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,8 +145,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="TCS.resx">
+      <DependentUpon>TCS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTMT.resx">
+      <DependentUpon>TTMT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -208,6 +245,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hinh-nen-powerpoint-don-gian-dep-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-icons-search-symbol-find-magnifying-glass-641.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

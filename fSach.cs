@@ -28,14 +28,7 @@ namespace QuanLyThuVien
             else
             {
                 Sach_DTO s = new Sach_DTO();
-                if (txtMasach.Text == s.MaSach)
-                {
-                    MessageBox.Show("Mã sách đã tồn tại!!!");
-                    txtMasach.ResetText();
-                    txtMasach.Focus();
-                }
-                else
-                {
+               
                     s.MaSach = txtMasach.Text;
                     s.TenSach = txtTensach.Text;
                     s.TacGia = txtTacgia.Text;
@@ -53,7 +46,6 @@ namespace QuanLyThuVien
 
                     fSach_Load(sender, e);
                     ResetGridview();
-                }
             }
         }
 
@@ -120,19 +112,7 @@ namespace QuanLyThuVien
         }
 
 
-        //private void dtgSach_Click(object sender, EventArgs e)
-        //{
-        //    DataGridViewRow row = dtgSach.SelectedRows[0];
-        //    txtMasach.Text = row.Cells[1].Value.ToString();
-        //    txtTensach.Text = row.Cells[2].Value.ToString();
-        //    txtTacgia.Text = row.Cells[3].Value.ToString();
-        //    cbTheloai.Text = row.Cells[4].Value.ToString();
-        //    txtNXB.Text = row.Cells[5].Value.ToString();
-        //    txtGia.Text = row.Cells[6].Value.ToString();
-        //    nbSL.Text = row.Cells[7].Value.ToString();
-        //    cbTT.Text = row.Cells[8].Value.ToString();
-
-        //}
+       
 
         private void fSach_Load(object sender, EventArgs e)
         {

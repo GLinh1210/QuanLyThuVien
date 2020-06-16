@@ -177,9 +177,9 @@
         private System.Windows.Forms.Label lbMK;
         private System.Windows.Forms.Label lbDN;
         private System.Windows.Forms.TextBox txtMK;
-        private System.Windows.Forms.TextBox txtDN;
         private System.Windows.Forms.Button btnDK;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox txtDN;
     }
 }
 

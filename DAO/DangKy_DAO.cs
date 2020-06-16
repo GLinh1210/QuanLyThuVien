@@ -13,7 +13,7 @@ namespace QuanLyThuVien.DAO
     {
 
         
-        public bool Insert(DangNhap_DTO dn, DangKy_DTO dk )
+        public bool Insert(Account_DTO dn, DocGia_DTO dk )
         {
             
             if (GetData("select* from ACCOUNT where MaDocGia = '" + dn.MaDocGia + "'").Rows.Count > 0)
@@ -22,7 +22,7 @@ namespace QuanLyThuVien.DAO
             sql += "N'" + dn.MaDocGia + "',N'" + dn.TenDangNhap + "','" + dn.MatKhau + "','" + 0 + "')";
             Excute(sql);
             string Sql = "INSERT INTO DOCGIA (MaDocGia, TenDangNhap, HoTen, DiaChi,GioiTinh,NamSinh) VALUES (";
-            Sql += "N'" + dn.MaDocGia + "',N'" + dn.TenDangNhap + "','" + dk.HoTen + "','" + dk.DiaChi + "','" + dk.GioiTinh + "','" + dk.NamSinh + "')";
+            Sql += "N'" + dn.MaDocGia + "',N'" + dn.TenDangNhap + "',N'" + dk.HoTen + "',N'" + dk.DiaChi + "',N'" + dk.GioiTinh + "','" + dk.NamSinh + "')";
             Excute(Sql);
             return true;
         }

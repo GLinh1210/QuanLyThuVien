@@ -8,18 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyThuVien.BUS;
+using QuanLyThuVien.DTO;
 using QuanLyThuVien.DAO;
 
 namespace QuanLyThuVien
 {
+    
     public partial class fLogin : Form
     {
+        
         DangNhap_BUS dnBUS = new DangNhap_BUS();
+
+        DocGia_DTO acc = new DocGia_DTO();
+
         public fLogin()
         {
             InitializeComponent();
-         
+            
         }
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -41,15 +48,17 @@ namespace QuanLyThuVien
         {
             if (dnBUS.DangNhap(txtDN.Text, txtMK.Text) == true)
             {
-                TrangChu tc = new TrangChu();
-                this.Hide();
-                tc.ShowDialog();
+                 TrangChu tc = new TrangChu(txtDN.Text);
+                    this.Hide();
+                    tc.ShowDialog();
+         
                 
             }
             else
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
+
             
 
         }
@@ -61,5 +70,6 @@ namespace QuanLyThuVien
             dk.ShowDialog();
             
         }
+        
     }
 }

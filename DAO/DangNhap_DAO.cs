@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyThuVien.DTO;
+using System.Data.Sql;
+using System.Data;
 
 
 namespace QuanLyThuVien.DAO
@@ -16,6 +18,7 @@ namespace QuanLyThuVien.DAO
                 return true;
             return false;
         }
+   
 
     }
 }

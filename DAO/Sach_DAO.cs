@@ -28,6 +28,8 @@ namespace QuanLyThuVien.DAO
         }
         public void Delete(string mS)
         {
+            Excute("delete from PHIEUTRA where MaSach = '" + mS + "'");
+            Excute("delete from PHIEUMUON where MaSach = '" + mS + "'");
             Excute("delete from SACH where MaSach = '" + mS + "'");
         }
 

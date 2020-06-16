@@ -10,16 +10,17 @@ using System.Data;
 
 namespace QuanLyThuVien.BUS
 {
-    class DangNhap_BUS
+    class DoiMK_BUS
     {
-        DangNhap_DAO dnDAO  = new DangNhap_DAO();
-        public bool DangNhap(string _tk, string _mk)
+        DoiMK_DAO mkDao = new DoiMK_DAO();
+        public void DoiMatKhau(Account_DTO mk)
         {
-            if (dnDAO.login(_tk, _mk) == true)
-                return true;
-            return false;
+            mkDao.DoiMK(mk);
         }
-       
-  
+        public bool CheckExist(string _tdn, string _mkc)
+        {
+            return mkDao.CheckExist(_tdn, _mkc);
+        }
+
     }
 }
