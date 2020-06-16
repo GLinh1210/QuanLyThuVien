@@ -30,10 +30,10 @@ namespace QuanLyThuVien.DAO
         {
             Excute("delete from PHIEUTRA where MaPhieu = '" + mt + "'");
         }
-        public void Sua(PhieuTra_DTO t)
+        public void Sua(PhieuTra_DTO pm)
         {
-            string sql = string.Format("update PHIEUTRA set MaDocGia = N'{0}', MaSach = N'{1}', NgayTra = N'{2}'",
-                t.MaDocGia,t.MaSach, t.NgayTra);
+            string sql = string.Format("update PHIEUTRA set MaDocGia = '{0}', MaSach = '{1}', NgayTra = '{2}' where MaPhieu = '{3}' ",
+                   pm.MaDocGia, pm.MaSach,  pm.NgayTra, pm.MaPhieu);
             Excute(sql);
         }
     }
