@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,23 +45,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BUS\DangKy_BUS.cs" />
+    <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="BUS\DoiMK_BUS.cs" />
+    <Compile Include="BUS\Sach_BUS.cs" />
+    <Compile Include="BUS\TrangChu_BUS.cs" />
+    <Compile Include="BUS\TS_BUS.cs" />
+    <Compile Include="BUS\TTMT_BUS.cs" />
+    <Compile Include="DAO\DangKy_DAO.cs" />
+    <Compile Include="DAO\DangNhap_DAO.cs" />
+    <Compile Include="DAO\DataProvier.cs" />
+    <Compile Include="DAO\DoiMK_DAO.cs" />
+    <Compile Include="DAO\Sach_DAO.cs" />
+    <Compile Include="DAO\TrangChu_DAO.cs" />
+    <Compile Include="DAO\TS_DAO.cs" />
+    <Compile Include="DAO\TTMT_DAO.cs" />
+    <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DoiMK.Designer.cs">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DocGia_DTO.cs" />
+    <Compile Include="DTO\Account_DTO.cs" />
+    <Compile Include="DTO\PhieuMuon_DTO.cs" />
+    <Compile Include="DTO\PhieuTra_DTO.cs" />
+    <Compile Include="DTO\Sach_DTO.cs" />
+    <Compile Include="fDangky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangky.Designer.cs">
+      <DependentUpon>fDangky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGiaoDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGiaoDien.Designer.cs">
+      <DependentUpon>fGiaoDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSach.Designer.cs">
+      <DependentUpon>fSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyThuVienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCS.Designer.cs">
+      <DependentUpon>TCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTMT.Designer.cs">
+      <DependentUpon>TTMT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoiMK.resx">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDangky.resx">
+      <DependentUpon>fDangky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGiaoDien.resx">
+      <DependentUpon>fGiaoDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSach.resx">
+      <DependentUpon>fSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCS.resx">
+      <DependentUpon>TCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTMT.resx">
+      <DependentUpon>TTMT.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,7 +165,89 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyThuVienDataSet.xsc">
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVienDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyThuVienDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVienDataSet.xss">
+      <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\anh2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\653-6536787_png-file-secure-login-icon-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\653-6536787_png-file-secure-login-icon-transparent-png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\653-6536787_png-file-secure-login-icon-transparent-png2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\653-6536787_png-file-secure-login-icon-transparent-png3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-3oNgt5C2JC5FucjUm2SPxg-696x464.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\public-cart-button-03-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-17259_list-add-clip-art-add-image-button-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-full-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-icons-search-symbol-find-magnifying-glass-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48c6384f542319b0a28d7059e5c500fd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-icons-login-tilted-planet-ltd-user-png-favpng-RGYzgs9WVdX8t8SXdj0y9KKwm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-nen-powerpoint-don-gian-dep-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-icons-search-symbol-find-magnifying-glass-641.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">

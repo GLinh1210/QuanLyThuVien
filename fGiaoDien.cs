@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class Form1 : Form
+    public partial class fGiaoDien : Form
     {
-        public Form1()
+        public fGiaoDien()
         {
             InitializeComponent();
+            
+
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            timer1.Enabled = false;
+        }
+
+        
     }
 }
