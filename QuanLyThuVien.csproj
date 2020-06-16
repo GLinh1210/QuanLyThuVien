@@ -48,6 +48,8 @@
     <Compile Include="BUS\DangKy_BUS.cs" />
     <Compile Include="BUS\DangNhap_BUS.cs" />
     <Compile Include="BUS\DoiMK_BUS.cs" />
+    <Compile Include="BUS\PhieuMuon_BUS.cs" />
+    <Compile Include="BUS\PhieuTra_BUS.cs" />
     <Compile Include="BUS\Sach_BUS.cs" />
     <Compile Include="BUS\TrangChu_BUS.cs" />
     <Compile Include="BUS\TS_BUS.cs" />
@@ -56,6 +58,8 @@
     <Compile Include="DAO\DangNhap_DAO.cs" />
     <Compile Include="DAO\DataProvier.cs" />
     <Compile Include="DAO\DoiMK_DAO.cs" />
+    <Compile Include="DAO\PhieuMuon_DAO.cs" />
+    <Compile Include="DAO\PhieuTra_DAO.cs" />
     <Compile Include="DAO\Sach_DAO.cs" />
     <Compile Include="DAO\TrangChu_DAO.cs" />
     <Compile Include="DAO\TS_DAO.cs" />
@@ -94,6 +98,18 @@
     </Compile>
     <Compile Include="fSach.Designer.cs">
       <DependentUpon>fSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuMuon.Designer.cs">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTra.Designer.cs">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fSach.resx">
       <DependentUpon>fSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuMuon.resx">
+      <DependentUpon>PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTra.resx">
+      <DependentUpon>PhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

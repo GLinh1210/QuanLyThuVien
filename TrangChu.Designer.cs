@@ -82,6 +82,7 @@
             this.btnMuon.TabIndex = 2;
             this.btnMuon.Text = "Quản Lý Mượn Sách";
             this.btnMuon.UseVisualStyleBackColor = false;
+            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
             // 
             // btnTra
             // 
@@ -94,6 +95,7 @@
             this.btnTra.TabIndex = 3;
             this.btnTra.Text = "Quản Lý Trả Sách";
             this.btnTra.UseVisualStyleBackColor = false;
+            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
             // 
             // btnThoat
             // 
