@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BUS\DangKy_BUS.cs" />
     <Compile Include="BUS\DangNhap_BUS.cs" />
+    <Compile Include="BUS\DocGia_BUS.cs" />
     <Compile Include="BUS\DoiMK_BUS.cs" />
     <Compile Include="BUS\PhieuMuon_BUS.cs" />
     <Compile Include="BUS\PhieuTra_BUS.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="DAO\DangKy_DAO.cs" />
     <Compile Include="DAO\DangNhap_DAO.cs" />
     <Compile Include="DAO\DataProvier.cs" />
+    <Compile Include="DAO\DocGia_DAO.cs" />
     <Compile Include="DAO\DoiMK_DAO.cs" />
     <Compile Include="DAO\PhieuMuon_DAO.cs" />
     <Compile Include="DAO\PhieuTra_DAO.cs" />
@@ -137,6 +139,12 @@
     <Compile Include="TCS.Designer.cs">
       <DependentUpon>TCS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThayDoiTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThayDoiTT.Designer.cs">
+      <DependentUpon>ThayDoiTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TCS.resx">
       <DependentUpon>TCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThayDoiTT.resx">
+      <DependentUpon>ThayDoiTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>

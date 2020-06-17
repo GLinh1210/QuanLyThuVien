@@ -30,13 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtgTra = new System.Windows.Forms.DataGridView();
+            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHIEUTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMP = new System.Windows.Forms.TextBox();
             this.cbMDG = new System.Windows.Forms.ComboBox();
+            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbMS = new System.Windows.Forms.ComboBox();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtTra = new System.Windows.Forms.DateTimePicker();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -46,22 +54,14 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
-            this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOCGIATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.DOCGIATableAdapter();
-            this.pHIEUTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHIEUTRATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUTRATableAdapter();
-            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgTra
@@ -83,6 +83,40 @@
             this.dtgTra.Size = new System.Drawing.Size(1080, 215);
             this.dtgTra.TabIndex = 0;
             this.dtgTra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMuon_CellContentClick);
+            // 
+            // maPhieuDataGridViewTextBoxColumn
+            // 
+            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã Phiếu";
+            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            // 
+            // maDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaDocGia";
+            this.maDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã Độc Giả";
+            this.maDocGiaDataGridViewTextBoxColumn.Name = "maDocGiaDataGridViewTextBoxColumn";
+            // 
+            // maSachDataGridViewTextBoxColumn
+            // 
+            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
+            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
+            // 
+            // ngayTraDataGridViewTextBoxColumn
+            // 
+            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
+            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "Ngày Trả";
+            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
+            // 
+            // pHIEUTRABindingSource
+            // 
+            this.pHIEUTRABindingSource.DataMember = "PHIEUTRA";
+            this.pHIEUTRABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -148,6 +182,11 @@
             this.cbMDG.TabIndex = 12;
             this.cbMDG.ValueMember = "MaDocGia";
             // 
+            // dOCGIABindingSource
+            // 
+            this.dOCGIABindingSource.DataMember = "DOCGIA";
+            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
             // cbMS
             // 
             this.cbMS.DataSource = this.sACHBindingSource;
@@ -160,13 +199,19 @@
             this.cbMS.TabIndex = 13;
             this.cbMS.ValueMember = "MaSach";
             // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
             // dtTra
             // 
+            this.dtTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtTra.Location = new System.Drawing.Point(150, 298);
             this.dtTra.MaxDate = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
             this.dtTra.Name = "dtTra";
-            this.dtTra.Size = new System.Drawing.Size(200, 22);
+            this.dtTra.Size = new System.Drawing.Size(200, 26);
             this.dtTra.TabIndex = 14;
             this.dtTra.Value = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
             // 
@@ -254,61 +299,17 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Quản Lý Phiếu Trả";
             // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // sACHTableAdapter
             // 
             this.sACHTableAdapter.ClearBeforeFill = true;
-            // 
-            // dOCGIABindingSource
-            // 
-            this.dOCGIABindingSource.DataMember = "DOCGIA";
-            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
             // dOCGIATableAdapter
             // 
             this.dOCGIATableAdapter.ClearBeforeFill = true;
             // 
-            // pHIEUTRABindingSource
-            // 
-            this.pHIEUTRABindingSource.DataMember = "PHIEUTRA";
-            this.pHIEUTRABindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // pHIEUTRATableAdapter
             // 
             this.pHIEUTRATableAdapter.ClearBeforeFill = true;
-            // 
-            // maPhieuDataGridViewTextBoxColumn
-            // 
-            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
-            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã Phiếu";
-            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
-            // 
-            // maDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaDocGia";
-            this.maDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã Độc Giả";
-            this.maDocGiaDataGridViewTextBoxColumn.Name = "maDocGiaDataGridViewTextBoxColumn";
-            // 
-            // maSachDataGridViewTextBoxColumn
-            // 
-            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
-            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
-            // 
-            // ngayTraDataGridViewTextBoxColumn
-            // 
-            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
-            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "Ngày Trả";
-            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
             // 
             // PhieuTra
             // 
@@ -338,10 +339,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhieuTra_FormClosing);
             this.Load += new System.EventHandler(this.PhieuTra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
