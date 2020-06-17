@@ -70,6 +70,7 @@
             this.btnDG.TabIndex = 1;
             this.btnDG.Text = "Quản Lý Độc Giả";
             this.btnDG.UseVisualStyleBackColor = false;
+            this.btnDG.Click += new System.EventHandler(this.btnDG_Click);
             // 
             // btnMuon
             // 
@@ -136,6 +137,7 @@
             this.btnThaydoi.TabIndex = 6;
             this.btnThaydoi.Text = "Thay đổi thông tin";
             this.btnThaydoi.UseVisualStyleBackColor = false;
+            this.btnThaydoi.Click += new System.EventHandler(this.btnThaydoi_Click);
             // 
             // btnMT
             // 

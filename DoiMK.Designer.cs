@@ -53,9 +53,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbMKC);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 363);
+            this.panel1.Size = new System.Drawing.Size(626, 364);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -164,6 +164,7 @@
             this.Name = "DoiMK";
             this.Text = "DoiMK";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DoiMK_FormClosing);
+            this.Load += new System.EventHandler(this.DoiMK_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

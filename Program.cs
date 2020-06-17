@@ -16,7 +16,7 @@ namespace QuanLyThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new PhieuTra());
+            //Application.Run(new QLDG());
             fGiaoDien f = new fGiaoDien();
             f.ShowDialog();
             if (f.DialogResult == DialogResult.OK)

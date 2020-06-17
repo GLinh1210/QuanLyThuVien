@@ -121,6 +121,24 @@ namespace QuanLyThuVien
 
         }
 
+        private void btnThaydoi_Click(object sender, EventArgs e)
+        {
+            ThayDoiTT mt = new ThayDoiTT(tdn);
+            this.Hide();
+            mt.ShowDialog();
+            this.Show();
+
+        }
+
+        private void btnDG_Click(object sender, EventArgs e)
+        {
+            QLDG dg = new QLDG();
+            this.Hide();
+            dg.ShowDialog();
+            this.Show();
+
+        }
+
   
 
 

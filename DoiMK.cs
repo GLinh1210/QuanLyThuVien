@@ -42,10 +42,11 @@ namespace QuanLyThuVien
                 acc.MatKhau = txtMKM.Text;
                 mk.DoiMatKhau(acc);
                 MessageBox.Show("Đổi mật khẩu thành công");
+                DoiMK_Load(sender, e);
             }
             else
             {
-                MessageBox.Show("Đổi mật khẩu không thành công");
+                MessageBox.Show("Đổi mật khẩu không thành công. Kiểm tra lại mật khẩu cũ!!!!");
             }
             
             
@@ -63,6 +64,13 @@ namespace QuanLyThuVien
             {
                 e.Cancel = true;
             } 
+        }
+
+        private void DoiMK_Load(object sender, EventArgs e)
+        {
+            txtMKC.ResetText();
+            txtMKM.ResetText();
+            txtMKM2.ResetText();
         }
         
 
