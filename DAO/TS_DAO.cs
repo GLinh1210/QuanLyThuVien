@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyThuVien.DAO
 {
-    class TS_DAO : DataProvier
+    public class TS_DAO : DataProvier
     {
         public DataTable TimSach()
         {

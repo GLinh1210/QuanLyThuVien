@@ -173,13 +173,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnDN;
         private System.Windows.Forms.Label lbMK;
         private System.Windows.Forms.Label lbDN;
-        private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Button btnDK;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox txtDN;
+        private System.Windows.Forms.TextBox txtDN;
+        private System.Windows.Forms.TextBox txtMK;
+        private System.Windows.Forms.Button btnDN;
     }
 }
 

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QuanLyThuVien.DAO
 {
-    class Sach_DAO : DataProvier
+    public class Sach_DAO : DataProvier
     {
         public DataTable loadSach()
         {

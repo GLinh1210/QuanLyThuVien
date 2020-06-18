@@ -10,7 +10,7 @@ using QuanLyThuVien.DTO;
 
 namespace QuanLyThuVien.DAO
 {
-    class PhieuTra_DAO : DataProvier
+    public class PhieuTra_DAO : DataProvier
     {
         public DataTable Phieutra()
         {

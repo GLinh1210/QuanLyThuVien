@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyThuVien.DAO
 {
-    class TrangChu_DAO : DataProvier
+    public class TrangChu_DAO : DataProvier
     {
         public DataTable HienThi()
         {

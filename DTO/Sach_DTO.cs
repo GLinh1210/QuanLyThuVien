@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyThuVien.DTO
 {
-    class Sach_DTO
+    public class Sach_DTO
     {
         public string MaSach { get; set; }
         public string TenSach { get; set; }

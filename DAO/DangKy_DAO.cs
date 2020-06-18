@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyThuVien.DAO
 {
-    class DangKy_DAO : DataProvier
+    public class DangKy_DAO : DataProvier
     {
 
         

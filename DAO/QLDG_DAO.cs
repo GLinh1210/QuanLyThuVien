@@ -9,7 +9,7 @@ using QuanLyThuVien.DTO;
 
 namespace QuanLyThuVien.DAO
 {
-    class QLDG_DAO : DataProvier
+    public class QLDG_DAO : DataProvier
     {
         public DataTable DocGia()
         {

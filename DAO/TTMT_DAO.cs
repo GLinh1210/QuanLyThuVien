@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyThuVien.DAO 
 {
-    class TTMT_DAO : DataProvier
+    public class TTMT_DAO : DataProvier
     {
        
         public DataTable PMu(string tk)
