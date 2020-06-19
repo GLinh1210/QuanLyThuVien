@@ -93,7 +93,7 @@ namespace QuanLyThuVien
                             MessageBox.Show("Thêm thành công. Quay lại trang Login để đăng nhập!");
 
                         else
-                            MessageBox.Show("Thêm không thành công");
+                            MessageBox.Show("Thêm không thành công. Tên đăng nhập đã tồn tại!!!");
                         ResetForm();
                     }
                     else
