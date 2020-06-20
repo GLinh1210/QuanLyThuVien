@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPhieuMuon", "TestPhieuM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPhieuTra", "TestPhieuTra\TestPhieuTra.csproj", "{4E684392-294C-4CED-A2D0-4A49BE5B005B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestQLDG", "TestQLDG\TestQLDG.csproj", "{F6B35223-74DB-41E7-A364-84E983E6C676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,16 @@ Global
 		{4E684392-294C-4CED-A2D0-4A49BE5B005B}.Release|ARM.ActiveCfg = Release|Any CPU
 		{4E684392-294C-4CED-A2D0-4A49BE5B005B}.Release|x64.ActiveCfg = Release|Any CPU
 		{4E684392-294C-4CED-A2D0-4A49BE5B005B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6B35223-74DB-41E7-A364-84E983E6C676}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
