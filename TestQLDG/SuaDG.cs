@@ -40,5 +40,6 @@ namespace TestQLDG
             Assert.AreEqual(DG.SuaDG1(dg, acc), true);
 
         }
+       
     }
 }

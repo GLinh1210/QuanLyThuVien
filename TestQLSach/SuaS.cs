@@ -24,5 +24,15 @@ namespace TestQLSach
             Assert.AreEqual(sa.Sua(s), false);
 
         }
+        [TestMethod]
+        public void SuaDung()
+        {
+            this.s = new QuanLyThuVien.DTO.Sach_DTO();
+
+            s.MaSach = "1000";
+            s.GiaSach = 120000;
+            Assert.AreEqual(sa.Sua(s), true);
+
+        }
     }
 }
