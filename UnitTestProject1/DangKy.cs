@@ -86,6 +86,18 @@ namespace TestDangNhapvaDangKy
             Assert.AreEqual(dk.Insert(acc, dg), false);
 
         }
+        [TestMethod]
+        public void ThieuTT()
+        {
+            this.acc = new QuanLyThuVien.DTO.Account_DTO();
+            this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
+            acc.MaDocGia = "497";
+            acc.TenDangNhap = "Test2";
+            acc.MatKhau = "123L";
+            dg.DiaChi = "fvgh";
+            Assert.AreEqual(dk.Insert(acc, dg), false);
+
+        }
 
     }
 }

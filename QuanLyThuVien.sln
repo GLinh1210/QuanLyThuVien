@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyThuVien", "QuanLyThuV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDangNhapvaDangKy", "UnitTestProject1\TestDangNhapvaDangKy.csproj", "{049CDE0E-2039-43E7-B61E-57B096DB6B6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPhieuMuon", "..\TestPhieuMuon\TestPhieuMuon.csproj", "{1AAF8B16-5B43-4DDD-9838-4779750A4181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{049CDE0E-2039-43E7-B61E-57B096DB6B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{049CDE0E-2039-43E7-B61E-57B096DB6B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{049CDE0E-2039-43E7-B61E-57B096DB6B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AAF8B16-5B43-4DDD-9838-4779750A4181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AAF8B16-5B43-4DDD-9838-4779750A4181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AAF8B16-5B43-4DDD-9838-4779750A4181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AAF8B16-5B43-4DDD-9838-4779750A4181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
