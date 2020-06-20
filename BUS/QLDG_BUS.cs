@@ -10,16 +10,20 @@ using QuanLyThuVien.DTO;
 
 namespace QuanLyThuVien.BUS
 {
-    class QLDG_BUS
+    public class QLDG_BUS
     {
         QLDG_DAO dgDao = new QLDG_DAO();
         public DataTable GetList()
         {
             return dgDao.DocGia();
         }
-        public void XoaDG1(string mS)
+        public bool XoaDG1(string mS)
         {
-            dgDao.XoaDG(mS);
+            if (string.IsNullOrEmpty(mS))
+                return false;
+            else if (dgDao.XoaDG(mS))
+                return true;
+            return false;
         }
         public bool SuaDG1(DocGia_DTO dg, Account_DTO acc)
         {
@@ -27,6 +31,7 @@ namespace QuanLyThuVien.BUS
                 return false;
             dgDao.SuaDG(dg, acc);
             return true;
+ 
         }
         public int ThemDG1(DocGia_DTO dg, Account_DTO acc)
         {

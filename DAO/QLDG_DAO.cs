@@ -30,22 +30,27 @@ namespace QuanLyThuVien.DAO
             Excute(Sql);
             return true;
         }
-        public void XoaDG(string mS)
+        public bool XoaDG(string mS)
         {
+            if (GetData("select* from ACCOUNT where MaDocGia = '" + mS + "'").Rows.Count <= 0)
+                return false;
             Excute("delete from PHIEUTRA where MaDocGia = '" + mS + "'");
             Excute("delete from PHIEUMUON where MaDocGia = '" + mS + "'");
             Excute("delete from ACCOUNT where MaDocGia = '" + mS + "'");
             Excute("delete from DOCGIA where MaDocGia = '" + mS + "'");
+            return true;
         }
 
         public void SuaDG(DocGia_DTO dg, Account_DTO acc)
         {
+            
             string Sql = string.Format("update ACCOUNT set  TenDangNhap = N'{0}' where MaDocGia = '{1}'",
                 acc.TenDangNhap, acc.MaDocGia);
             Excute(Sql);
             string sql = string.Format("update DOCGIA set  TenDangNhap = N'{0}', HoTen = N'{1}', GioiTinh = N'{2}', NamSinh = '{3}', DiaChi = N'{4}'  where MaDocGia = '{5}'",
                 acc.TenDangNhap, dg.HoTen, dg.GioiTinh, dg.NamSinh, dg.DiaChi, acc.MaDocGia);
             Excute(sql);
+            
         }
         public DataTable TimDG(string _timkiem, string _loaitk)
         {

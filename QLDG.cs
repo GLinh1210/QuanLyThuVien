@@ -104,13 +104,18 @@ namespace QuanLyThuVien
         {
             if (txtMDG.Text != "")
             {
-                dgB.XoaDG1(txtMDG.Text);
-                MessageBox.Show("Đã xóa độc giả");
-                ResetForm();
-                QLDG_Load(sender, e);
+
+                if (dgB.XoaDG1(txtMDG.Text))
+                {
+                    MessageBox.Show("Đã xóa độc giả");
+                    ResetForm();
+                    QLDG_Load(sender, e);
+                }
+                else
+                    MessageBox.Show("Xóa không thành công");
             }
             else
-                MessageBox.Show("Xóa không thành công");
+                MessageBox.Show("Chưa nhập mã độc giả cần xóa");
         }
 
         private void btnSua_Click(object sender, EventArgs e)

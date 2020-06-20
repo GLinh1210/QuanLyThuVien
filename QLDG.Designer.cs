@@ -219,7 +219,7 @@
             this.dtNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNS.Location = new System.Drawing.Point(221, 253);
-            this.dtNS.MaxDate = new System.DateTime(2020, 6, 19, 0, 0, 0, 0);
+            this.dtNS.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtNS.Name = "dtNS";
             this.dtNS.Size = new System.Drawing.Size(200, 26);
             this.dtNS.TabIndex = 16;
