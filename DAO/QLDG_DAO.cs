@@ -20,8 +20,10 @@ namespace QuanLyThuVien.DAO
         {
             if (GetData("select* from ACCOUNT where MaDocGia = '" + acc.MaDocGia + "'").Rows.Count > 0)
                 return false;
+            else if (GetData("select* from ACCOUNT where TenDangNhap = '" + acc.TenDangNhap + "'").Rows.Count > 0)
+                return false;
             string sql = "INSERT INTO ACCOUNT(MaDocGia, TenDangNhap, MatKhau, Quyen)VALUES (";
-            sql += "N'" + acc.MaDocGia + "',N'" + acc.TenDangNhap + "','" + acc.MatKhau + "','" + 0 + "')";
+            sql += "N'" + acc.MaDocGia + "',N'" + acc.TenDangNhap + "','" + 123 + "','" + 0 + "')";
             Excute(sql);
             string Sql = "INSERT INTO DOCGIA (MaDocGia, TenDangNhap, HoTen, DiaChi,GioiTinh,NamSinh) VALUES (";
             Sql += "N'" + acc.MaDocGia + "',N'" + acc.TenDangNhap + "',N'" + dg.HoTen + "',N'" + dg.DiaChi + "',N'" + dg.GioiTinh + "','" + dg.NamSinh + "')";
