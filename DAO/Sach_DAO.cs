@@ -20,9 +20,10 @@ namespace QuanLyThuVien.DAO
         {
             if (GetData("select* from SACH where MaSach = '" + s.MaSach + "'").Rows.Count > 0)
                 return false;
+            else if (GetData("select* from SACH where TenSach = '" + s.TenSach + "'").Rows.Count > 0)
+                return false;
             string sql = string.Format("Insert Into SACH values('{0}',N'{1}',N'{2}',N'{3}',N'{4}','{5}','{6}', N'{7}')",
                 s.MaSach, s.TenSach, s.TacGia, s.TheLoai, s.NhaXuatBan, s.GiaSach, s.SoLuong, s.TinhTrang);
-
             Excute(sql);
             return true;
         }
