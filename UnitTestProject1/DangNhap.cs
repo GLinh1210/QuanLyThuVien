@@ -27,7 +27,7 @@ namespace TestDangNhapvaDangKy
         [TestMethod]
         public void DNUser()
         {
-            Assert.AreEqual(dn.login("Linhle123", "L123"), true);
+            Assert.AreEqual(dn.login("Linhle", "123L"), true);
         }
         [TestMethod]
         public void ThieuTDN()

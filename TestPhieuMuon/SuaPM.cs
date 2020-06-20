@@ -19,8 +19,8 @@ namespace TestPhieuMuon
         {
             this.m = new QuanLyThuVien.DTO.PhieuMuon_DTO();
             m.MaPhieu = "";
-            m.MaDocGia = "739";
-            m.MaSach = "03942";
+            m.MaDocGia = "105";
+            m.MaSach = "1001";
             m.NgayMuon = DateTime.Today;
             m.NgayPhaiTra = DateTime.Today;
 
@@ -32,8 +32,8 @@ namespace TestPhieuMuon
         {
             this.m = new QuanLyThuVien.DTO.PhieuMuon_DTO();
             m.MaPhieu = "5";
-            m.MaDocGia = "739";
-            m.MaSach = "03942";
+            m.MaDocGia = "103";
+            m.MaSach = "1001";
             m.NgayMuon = DateTime.Today;
             m.NgayPhaiTra = DateTime.Today;
 

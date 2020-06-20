@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QuanLyThuVien.BUS
 {
-    class PhieuTra_BUS
+    public class PhieuTra_BUS
     {
         PhieuTra_DAO tDao = new PhieuTra_DAO();
         public DataTable GetList()

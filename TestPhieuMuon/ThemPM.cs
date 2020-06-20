@@ -19,8 +19,8 @@ namespace TestPhieuMuon
         {
             this.m = new QuanLyThuVien.DTO.PhieuMuon_DTO();
             m.MaPhieu = "5";
-            m.MaDocGia = "739";
-            m.MaSach = "03942";
+            m.MaDocGia = "100";
+            m.MaSach = "1000";
             m.NgayMuon = DateTime.Today;
             m.NgayPhaiTra = DateTime.Today;
 
@@ -31,9 +31,9 @@ namespace TestPhieuMuon
         public void ThemDu()
         {
             this.m = new QuanLyThuVien.DTO.PhieuMuon_DTO();
-            m.MaPhieu = "3";
-            m.MaDocGia = "739";
-            m.MaSach = "03942";
+            m.MaPhieu = "7";
+            m.MaDocGia = "105";
+            m.MaSach = "1000";
             m.NgayMuon = DateTime.Today;
             m.NgayPhaiTra = DateTime.Today;
 

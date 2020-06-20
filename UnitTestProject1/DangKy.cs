@@ -20,7 +20,7 @@ namespace TestDangNhapvaDangKy
         {
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "776";
+            acc.MaDocGia = "100";
             acc.TenDangNhap = "KimNgan";
             acc.MatKhau = "KN123";
             acc.Quyen = 0;
@@ -39,33 +39,16 @@ namespace TestDangNhapvaDangKy
         {
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "126";
-            acc.TenDangNhap = "KimNgan";
+            acc.MaDocGia = "110";
+            acc.TenDangNhap = "KimNgan12";
             acc.MatKhau = "KN123";
             acc.Quyen = 0;
-            dg.NamSinh = DateTime.Now;
+            dg.NamSinh = DateTime.Today;
             dg.HoTen = "Lê Kim Ngân";
             dg.DiaChi = "23 Nguyễn Kiệm";
             dg.GioiTinh = "Nữ";
 
             Assert.AreEqual(dk.Insert(acc, dg), true);
-
-        }
-        [TestMethod]
-        public void MKInHoa()
-        {
-            this.acc = new QuanLyThuVien.DTO.Account_DTO();
-            this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "456";
-            acc.TenDangNhap = "Test1";
-            acc.MatKhau = "123";
-            acc.Quyen = 0;
-            dg.NamSinh = DateTime.Now;
-            dg.HoTen = "Lê Kim Ngân";
-            dg.DiaChi = "23 Nguyễn Kiệm";
-            dg.GioiTinh = "Nữ";
-
-            Assert.AreEqual(dk.Insert(acc, dg), false );
 
         }
        
@@ -74,8 +57,8 @@ namespace TestDangNhapvaDangKy
         {
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "412";
-            acc.TenDangNhap = "hathu";
+            acc.MaDocGia = "112";
+            acc.TenDangNhap = "KimNgan";
             acc.MatKhau = "123L";
             acc.Quyen = 0;
             dg.NamSinh = DateTime.Now;
@@ -91,7 +74,7 @@ namespace TestDangNhapvaDangKy
         {
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "497";
+            acc.MaDocGia = "113";
             acc.TenDangNhap = "Test2";
             acc.MatKhau = "123L";
             dg.DiaChi = "fvgh";
