@@ -54,9 +54,12 @@ namespace QuanLyThuVien
             if (txtMasach.Text != "")
             {
                 sachBUS.Xoa(txtMasach.Text);
+                MessageBox.Show("Xóa Sách Thành Công");
                 ResetGridview();
                 fSach_Load(sender, e);
             }
+            else
+                MessageBox.Show("Chưa nhập mã sách cần xóa");
         }
 
         private void btnSua_Click(object sender, EventArgs e)

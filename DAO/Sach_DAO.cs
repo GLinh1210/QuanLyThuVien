@@ -22,15 +22,17 @@ namespace QuanLyThuVien.DAO
                 return false;
             string sql = string.Format("Insert Into SACH values('{0}',N'{1}',N'{2}',N'{3}',N'{4}','{5}','{6}', N'{7}')",
                 s.MaSach, s.TenSach, s.TacGia, s.TheLoai, s.NhaXuatBan, s.GiaSach, s.SoLuong, s.TinhTrang);
-
             Excute(sql);
             return true;
         }
-        public void Delete(string mS)
+        public bool Delete(string mS)
         {
+            if (GetData("select* from SACH where MaSach = '" + mS + "'").Rows.Count <= 0)
+                return false;
             Excute("delete from PHIEUTRA where MaSach = '" + mS + "'");
             Excute("delete from PHIEUMUON where MaSach = '" + mS + "'");
             Excute("delete from SACH where MaSach = '" + mS + "'");
+            return true;
         }
 
         public void Update(Sach_DTO s)

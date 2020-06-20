@@ -26,6 +26,7 @@ namespace TestPhieuTra
             Assert.AreEqual(pt.SuaT(t), false);
 
         }
+  
         [TestMethod]
         public void SuaDung()
         {
