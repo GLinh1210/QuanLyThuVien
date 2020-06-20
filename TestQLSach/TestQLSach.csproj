@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d2575ddc-a5a5-4e63-a14c-4c1b0d5d7230</ProjectGuid>
+    <ProjectGuid>{E97DA9F4-9352-4A7A-9CAF-7D0FB218FF9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestQLSach</RootNamespace>

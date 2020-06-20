@@ -26,11 +26,14 @@ namespace QuanLyThuVien.DAO
             Excute(sql);
             return true;
         }
-        public void Delete(string mS)
+        public bool Delete(string mS)
         {
+            if (GetData("select* from SACH where MaSach = '" + mS + "'").Rows.Count <= 0)
+                return false;
             Excute("delete from PHIEUTRA where MaSach = '" + mS + "'");
             Excute("delete from PHIEUMUON where MaSach = '" + mS + "'");
             Excute("delete from SACH where MaSach = '" + mS + "'");
+            return true;
         }
 
         public void Update(Sach_DTO s)
