@@ -31,6 +31,8 @@ namespace TestQLDG
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             acc.MaDocGia = "105";
             acc.TenDangNhap = "VanAn";
+            dg.HoTen = "Nguyễn Thị A";
+            dg.NamSinh = DateTime.Today;
             dg.GioiTinh = "Nữ";
             dg.DiaChi = "Đại học mở";
 
