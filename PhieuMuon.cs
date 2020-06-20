@@ -88,11 +88,17 @@ namespace QuanLyThuVien
 
         private void BtXoa_Click(object sender, EventArgs e)
         {
+            int check = muonBUS.XoaM(txtMP.Text);
             if (txtMP.Text != "")
             {
-                muonBUS.XoaM(txtMP.Text);
-                Reset(sender, e);
-                PhieuMuon_Load(sender, e);
+                if (check == -1)
+                {
+                    MessageBox.Show("Đã xóa phiếu mượn");
+                    Reset(sender, e);
+                    PhieuMuon_Load(sender, e);
+                }
+                else if (check == 0)
+                    MessageBox.Show("Xóa không thành công");
             }
         }
 

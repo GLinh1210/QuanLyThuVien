@@ -209,7 +209,7 @@
             this.dtTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtTra.Location = new System.Drawing.Point(150, 298);
-            this.dtTra.MaxDate = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
+            this.dtTra.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtTra.Name = "dtTra";
             this.dtTra.Size = new System.Drawing.Size(200, 26);
             this.dtTra.TabIndex = 14;

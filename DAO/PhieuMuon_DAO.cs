@@ -19,6 +19,8 @@ namespace QuanLyThuVien.DAO
         }
         public bool Them(PhieuMuon_DTO pm)
         {
+            Sach_DTO s = new Sach_DTO();
+            DocGia_DTO dg = new DocGia_DTO();
             if (GetData("select* from PHIEUMUON where MaPhieu = '" + pm.MaPhieu + "'").Rows.Count > 0)
                 return false;
             string sql = "insert into PHIEUMUON (MaPhieu, MaDocGia, MaSach, NgayMuon, NgayPhaiTra ) values('" + pm.MaPhieu + "','" + pm.MaDocGia + "','" + pm.MaSach + "','" + pm.NgayMuon + "','" + pm.NgayPhaiTra + "')";
@@ -28,9 +30,12 @@ namespace QuanLyThuVien.DAO
 
         }
 
-        public void Xoa(string mp)
+        public bool Xoa(string mp)
         {
+            if (GetData("select* from PHIEUMUON where MaPhieu = '" + mp + "'").Rows.Count <= 0)
+                return false;
             Excute("delete from PHIEUMUON where MaPhieu = '" + mp + "'");
+            return true;
 
 
         }

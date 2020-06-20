@@ -28,9 +28,12 @@ namespace QuanLyThuVien.DAO
 
         }
 
-        public void Xoa(string mp)
+        public bool Xoa(string mp)
         {
+            if (GetData("select* from PHIEUTRA where MaPhieu = '" + mp + "'").Rows.Count <= 0)
+                return false;
             Excute("delete from PHIEUTRA where MaPhieu = '" + mp + "'");
+            return true;
 
 
         }

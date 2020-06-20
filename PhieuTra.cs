@@ -86,11 +86,17 @@ namespace QuanLyThuVien
 
         private void BtXoa_Click(object sender, EventArgs e)
         {
+            int check = traBUS.XoaT(txtMP.Text);
             if (txtMP.Text != "")
             {
-                traBUS.XoaT(txtMP.Text);
-                Reset(sender, e);
-                PhieuTra_Load(sender, e);
+                if (check == -1)
+                {
+                    MessageBox.Show("Đã xóa phiếu mượn");
+                    Reset(sender, e);
+                    PhieuTra_Load(sender, e);
+                }
+                else if (check == 0)
+                    MessageBox.Show("Xóa không thành công");
             }
         }
 
