@@ -10,7 +10,7 @@ using System.Data;
 
 namespace QuanLyThuVien.DAO
 {
-    class DangNhap_DAO : DataProvier
+    public class DangNhap_DAO : DataProvier
     {
         public bool login(string _tk, string _mk)
         {

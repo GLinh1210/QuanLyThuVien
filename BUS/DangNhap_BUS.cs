@@ -10,7 +10,7 @@ using System.Data;
 
 namespace QuanLyThuVien.BUS
 {
-    class DangNhap_BUS
+    public class DangNhap_BUS
     {
         DangNhap_DAO dnDAO  = new DangNhap_DAO();
         public bool DangNhap(string _tk, string _mk)

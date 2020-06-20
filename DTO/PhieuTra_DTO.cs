@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyThuVien.DTO
 {
-    class PhieuTra_DTO
+    public class PhieuTra_DTO
     {
         public string MaPhieu { get; set; }
         public string MaDocGia { get; set; }

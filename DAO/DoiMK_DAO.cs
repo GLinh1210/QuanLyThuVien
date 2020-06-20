@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace QuanLyThuVien.DAO
 {
-    class DoiMK_DAO : DataProvier
+    public class DoiMK_DAO : DataProvier
     {
         public void DoiMK(Account_DTO mk)
         {
