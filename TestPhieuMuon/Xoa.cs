@@ -26,7 +26,7 @@ namespace TestPhieuMuon
         public void XoaSaiMP()
         {
             this.m = new QuanLyThuVien.DTO.PhieuMuon_DTO();
-            m.MaPhieu = "2";
+            m.MaPhieu = "8";
 
             Assert.AreEqual(pm.Xoa(m.MaPhieu), false);
 
