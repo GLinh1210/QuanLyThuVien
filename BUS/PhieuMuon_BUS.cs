@@ -9,16 +9,21 @@ using System.Data;
 
 namespace QuanLyThuVien.BUS
 {
-    class PhieuMuon_BUS
+    public class PhieuMuon_BUS
     {
         PhieuMuon_DAO muonDao = new PhieuMuon_DAO();
         public DataTable GetList()
         {
             return muonDao.Phieumuon();
         }
-        public void XoaM(string mS)
+        public int XoaM(string mS)
         {
-            muonDao.Xoa(mS);
+            if (string.IsNullOrEmpty(mS))
+                return 0;
+            if (!muonDao.Xoa(mS))
+                return -1;
+            return 1;
+        
         }
         public bool SuaM(PhieuMuon_DTO pm)
         {

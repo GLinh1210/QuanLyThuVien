@@ -56,8 +56,8 @@ namespace TestDangNhapvaDangKy
         {
             this.acc = new QuanLyThuVien.DTO.Account_DTO();
             this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            acc.MaDocGia = "4567";
-            acc.TenDangNhap = "hathu";
+            acc.MaDocGia = "456";
+            acc.TenDangNhap = "Test1";
             acc.MatKhau = "123";
             acc.Quyen = 0;
             dg.NamSinh = DateTime.Now;

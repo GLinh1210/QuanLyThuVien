@@ -16,9 +16,13 @@ namespace QuanLyThuVien.BUS
         {
             return tDao.Phieutra();
         }
-        public void XoaT(string mS)
+        public int XoaT(string mS)
         {
-            tDao.Xoa(mS);
+            if (string.IsNullOrEmpty(mS))
+                return 0;
+            if (!tDao.Xoa(mS))
+                return -1;
+            return 1;
         }
         public bool SuaT(PhieuTra_DTO pm)
         {
