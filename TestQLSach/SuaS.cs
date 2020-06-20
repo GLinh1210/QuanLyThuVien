@@ -18,10 +18,10 @@ namespace TestQLSach
         [TestMethod]
         public void MPTrong()
         {
-            this.dg = new QuanLyThuVien.DTO.DocGia_DTO();
-            this.acc = new QuanLyThuVien.DTO.Account_DTO();
-            acc.MaDocGia = "";
-            Assert.AreEqual(DG.SuaDG1(dg, acc), false);
+            this.s = new QuanLyThuVien.DTO.Sach_DTO();
+
+            s.MaSach = "";
+            Assert.AreEqual(sa.Sua(s), false);
 
         }
     }
