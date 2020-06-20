@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QuanLyThuVien.BUS
 {
-    class Sach_BUS
+    public class Sach_BUS
     {
         Sach_DAO sachDao = new Sach_DAO();
         public DataTable GetList()

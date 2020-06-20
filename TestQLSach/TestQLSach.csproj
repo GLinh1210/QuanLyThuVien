@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="ThemS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuaS.cs" />
     <Compile Include="XoaS.cs" />
   </ItemGroup>
   <ItemGroup>
