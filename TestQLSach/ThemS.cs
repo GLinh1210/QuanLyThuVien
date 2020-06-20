@@ -24,12 +24,14 @@ namespace TestQLSach
             Assert.AreEqual(sa.Insert(s), false);
         }
         [TestMethod]
-        public void TrungTenSach()
+        public void ThemSach()
         {
             this.s = new QuanLyThuVien.DTO.Sach_DTO();
             s.MaSach = "1006";
-            s.TenSach = "Nhập môn tin học";
-            Assert.AreEqual(sa.Insert(s), false);
+            s.TenSach = "Vật Lý 10";
+            s.TinhTrang = "Hết";
+            s.NhaXuatBan = "Giáo Khoa Việt Nam";
+            Assert.AreEqual(sa.Insert(s), true);
         }
     }
 }
