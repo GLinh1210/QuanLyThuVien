@@ -172,37 +172,40 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.BackgroundImage = global::QuanLyThuVien.Properties.Resources.trash_full_512;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(526, 273);
+            this.btnXoa.Location = new System.Drawing.Point(526, 255);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(86, 50);
+            this.btnXoa.Size = new System.Drawing.Size(77, 68);
             this.btnXoa.TabIndex = 20;
-            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackgroundImage = global::QuanLyThuVien.Properties.Resources._126794;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(526, 178);
+            this.btnSua.Location = new System.Drawing.Point(526, 159);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(86, 50);
+            this.btnSua.Size = new System.Drawing.Size(77, 67);
             this.btnSua.TabIndex = 19;
-            this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnTDG
             // 
+            this.btnTDG.BackgroundImage = global::QuanLyThuVien.Properties.Resources._1_17259_list_add_clip_art_add_image_button_png;
+            this.btnTDG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTDG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTDG.Location = new System.Drawing.Point(526, 80);
+            this.btnTDG.Location = new System.Drawing.Point(526, 68);
             this.btnTDG.Name = "btnTDG";
-            this.btnTDG.Size = new System.Drawing.Size(86, 50);
+            this.btnTDG.Size = new System.Drawing.Size(77, 68);
             this.btnTDG.TabIndex = 18;
-            this.btnTDG.Text = "Thêm";
             this.btnTDG.UseVisualStyleBackColor = true;
             this.btnTDG.Click += new System.EventHandler(this.btnTDG_Click);
             // 
@@ -345,13 +348,14 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_641;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(176, 162);
+            this.btnTim.Location = new System.Drawing.Point(212, 159);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(86, 50);
+            this.btnTim.Size = new System.Drawing.Size(65, 50);
             this.btnTim.TabIndex = 12;
-            this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
