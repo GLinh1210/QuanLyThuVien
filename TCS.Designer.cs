@@ -32,15 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgTCSach = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTimS = new System.Windows.Forms.TextBox();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.lbTB = new System.Windows.Forms.Label();
-            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tacGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,10 +39,19 @@
             this.nhaXuatBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTB = new System.Windows.Forms.Label();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTimS = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sACHTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.SACHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTCSach)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgTCSach
@@ -91,86 +91,6 @@
             this.dtgTCSach.RowTemplate.Height = 24;
             this.dtgTCSach.Size = new System.Drawing.Size(776, 245);
             this.dtgTCSach.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Honeydew;
-            this.panel1.Controls.Add(this.lbTB);
-            this.panel1.Controls.Add(this.btnTim);
-            this.panel1.Controls.Add(this.txtTimS);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 245);
-            this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(243, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tra cứu thông tin sách";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(113, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên sách: ";
-            // 
-            // txtTimS
-            // 
-            this.txtTimS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimS.Location = new System.Drawing.Point(262, 90);
-            this.txtTimS.Name = "txtTimS";
-            this.txtTimS.Size = new System.Drawing.Size(222, 26);
-            this.txtTimS.TabIndex = 2;
-            // 
-            // btnTim
-            // 
-            this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_641;
-            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(332, 151);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(64, 51);
-            this.btnTim.TabIndex = 3;
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // lbTB
-            // 
-            this.lbTB.AutoSize = true;
-            this.lbTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTB.ForeColor = System.Drawing.Color.Red;
-            this.lbTB.Location = new System.Drawing.Point(505, 96);
-            this.lbTB.Name = "lbTB";
-            this.lbTB.Size = new System.Drawing.Size(214, 20);
-            this.lbTB.TabIndex = 4;
-            this.lbTB.Text = "Không tìm thấy tên sách !!!!";
-            // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
-            // sACHTableAdapter
-            // 
-            this.sACHTableAdapter.ClearBeforeFill = true;
             // 
             // maSachDataGridViewTextBoxColumn
             // 
@@ -214,6 +134,86 @@
             this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình Trạng";
             this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
             // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
+            this.panel1.Controls.Add(this.lbTB);
+            this.panel1.Controls.Add(this.btnTim);
+            this.panel1.Controls.Add(this.txtTimS);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 245);
+            this.panel1.TabIndex = 1;
+            // 
+            // lbTB
+            // 
+            this.lbTB.AutoSize = true;
+            this.lbTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTB.ForeColor = System.Drawing.Color.Red;
+            this.lbTB.Location = new System.Drawing.Point(505, 96);
+            this.lbTB.Name = "lbTB";
+            this.lbTB.Size = new System.Drawing.Size(214, 20);
+            this.lbTB.TabIndex = 4;
+            this.lbTB.Text = "Không tìm thấy tên sách !!!!";
+            // 
+            // btnTim
+            // 
+            this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_641;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Location = new System.Drawing.Point(332, 152);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(60, 50);
+            this.btnTim.TabIndex = 3;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // txtTimS
+            // 
+            this.txtTimS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimS.Location = new System.Drawing.Point(262, 90);
+            this.txtTimS.Name = "txtTimS";
+            this.txtTimS.Size = new System.Drawing.Size(222, 26);
+            this.txtTimS.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(113, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên sách: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(243, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(263, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tra cứu thông tin sách";
+            // 
+            // sACHTableAdapter
+            // 
+            this.sACHTableAdapter.ClearBeforeFill = true;
+            // 
             // TCS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,10 +226,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TCS_FormClosing);
             this.Load += new System.EventHandler(this.TCS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTCSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

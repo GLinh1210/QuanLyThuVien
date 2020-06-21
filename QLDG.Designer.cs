@@ -352,9 +352,9 @@
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.Location = new System.Drawing.Point(212, 159);
+            this.btnTim.Location = new System.Drawing.Point(216, 148);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(65, 50);
+            this.btnTim.Size = new System.Drawing.Size(58, 48);
             this.btnTim.TabIndex = 12;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);

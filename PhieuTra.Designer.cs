@@ -277,9 +277,9 @@
             this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_64;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(928, 165);
+            this.btnTim.Location = new System.Drawing.Point(940, 136);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 56);
+            this.btnTim.Size = new System.Drawing.Size(60, 49);
             this.btnTim.TabIndex = 22;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);

@@ -168,9 +168,9 @@
             this.btnCN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCN.Location = new System.Drawing.Point(150, 467);
+            this.btnCN.Location = new System.Drawing.Point(150, 480);
             this.btnCN.Name = "btnCN";
-            this.btnCN.Size = new System.Drawing.Size(84, 71);
+            this.btnCN.Size = new System.Drawing.Size(71, 58);
             this.btnCN.TabIndex = 0;
             this.btnCN.UseVisualStyleBackColor = true;
             this.btnCN.Click += new System.EventHandler(this.btnCN_Click);
@@ -181,9 +181,9 @@
             this.btnT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnT.Location = new System.Drawing.Point(388, 467);
+            this.btnT.Location = new System.Drawing.Point(388, 480);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(81, 71);
+            this.btnT.Size = new System.Drawing.Size(63, 58);
             this.btnT.TabIndex = 1;
             this.btnT.UseVisualStyleBackColor = true;
             this.btnT.Click += new System.EventHandler(this.btnT_Click);
