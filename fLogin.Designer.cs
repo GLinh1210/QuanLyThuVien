@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
-            this.btnDK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDK = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDN = new System.Windows.Forms.Button();
@@ -38,21 +38,10 @@
             this.lbDN = new System.Windows.Forms.Label();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtDN = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnDK
-            // 
-            this.btnDK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDK.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDK.Location = new System.Drawing.Point(17, 241);
-            this.btnDK.Name = "btnDK";
-            this.btnDK.Size = new System.Drawing.Size(149, 68);
-            this.btnDK.TabIndex = 5;
-            this.btnDK.Text = "Đăng ký";
-            this.btnDK.UseVisualStyleBackColor = true;
-            this.btnDK.Click += new System.EventHandler(this.btnDK_Click);
             // 
             // pictureBox1
             // 
@@ -64,6 +53,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(165, 138);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnDK
+            // 
+            this.btnDK.BackgroundImage = global::QuanLyThuVien.Properties.Resources.signup_blue;
+            this.btnDK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDK.Font = new System.Drawing.Font("Microsoft YaHei", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDK.Location = new System.Drawing.Point(62, 225);
+            this.btnDK.Name = "btnDK";
+            this.btnDK.Size = new System.Drawing.Size(75, 58);
+            this.btnDK.TabIndex = 5;
+            this.btnDK.UseVisualStyleBackColor = true;
+            this.btnDK.Click += new System.EventHandler(this.btnDK_Click);
             // 
             // panel1
             // 
@@ -150,12 +152,23 @@
             this.txtDN.Size = new System.Drawing.Size(233, 30);
             this.txtDN.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 297);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 29);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Đăng Ký";
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(759, 335);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDK);
             this.Controls.Add(this.panel1);
@@ -166,6 +179,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,6 +194,7 @@
         private System.Windows.Forms.TextBox txtDN;
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Button btnDN;
+        private System.Windows.Forms.Label label1;
     }
 }
 

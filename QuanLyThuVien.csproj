@@ -299,6 +299,15 @@
       <Name>BUS</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy_disk-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-check-mark-computer-icons-various-actions-logo-web-button-cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signup-blue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
