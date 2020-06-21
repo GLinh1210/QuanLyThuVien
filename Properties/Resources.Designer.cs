@@ -183,6 +183,16 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Floppy_disk_512 {
+            get {
+                object obj = ResourceManager.GetObject("Floppy_disk-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_nen_powerpoint_don_gian_dep_1 {
             get {
                 object obj = ResourceManager.GetObject("hinh-nen-powerpoint-don-gian-dep-1", resourceCulture);
@@ -255,6 +265,16 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_check_mark_computer_icons_various_actions_logo_web_button_cross {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-check-mark-computer-icons-various-actions-logo-web-button-cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap power_512 {
             get {
                 object obj = ResourceManager.GetObject("power-512", resourceCulture);
@@ -268,6 +288,16 @@ namespace QuanLyThuVien.Properties {
         internal static System.Drawing.Bitmap public_cart_button_03_hi {
             get {
                 object obj = ResourceManager.GetObject("public-cart-button-03-hi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signup_blue {
+            get {
+                object obj = ResourceManager.GetObject("signup-blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
