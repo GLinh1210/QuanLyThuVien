@@ -217,45 +217,50 @@
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.Transparent;
+            this.btnThem.BackgroundImage = global::QuanLyThuVien.Properties.Resources._1_17259_list_add_clip_art_add_image_button_png;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Location = new System.Drawing.Point(432, 129);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 56);
             this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.BtThem_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackgroundImage = global::QuanLyThuVien.Properties.Resources._126794;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Location = new System.Drawing.Point(432, 264);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 56);
             this.btnSua.TabIndex = 18;
-            this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackgroundImage = global::QuanLyThuVien.Properties.Resources.trash_full_512;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Location = new System.Drawing.Point(582, 129);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 56);
             this.btnXoa.TabIndex = 19;
-            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.BtXoa_Click);
             // 
             // btnQL
             // 
+            this.btnQL.BackgroundImage = global::QuanLyThuVien.Properties.Resources._3;
+            this.btnQL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQL.Location = new System.Drawing.Point(582, 264);
             this.btnQL.Name = "btnQL";
             this.btnQL.Size = new System.Drawing.Size(75, 56);
             this.btnQL.TabIndex = 20;
-            this.btnQL.Text = "Quay Lại";
             this.btnQL.UseVisualStyleBackColor = true;
             this.btnQL.Click += new System.EventHandler(this.btnQL_Click);
             // 
@@ -269,12 +274,13 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Konfest_PNG_JPG_Image_Pic_Photo_Free_Download_Royalty_Unlimited_clip_art_sticker_icons_search_symbol_find_magnifying_glass_64;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Location = new System.Drawing.Point(928, 165);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(75, 56);
             this.btnTim.TabIndex = 22;
-            this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
