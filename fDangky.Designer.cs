@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNL = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.lbTenDG = new System.Windows.Forms.Label();
             this.btnThoat1 = new System.Windows.Forms.Button();
             this.btnDK1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtNL = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(731, 474);
             this.panel2.TabIndex = 8;
+            // 
+            // txtNL
+            // 
+            this.txtNL.Location = new System.Drawing.Point(222, 267);
+            this.txtNL.Name = "txtNL";
+            this.txtNL.PasswordChar = '*';
+            this.txtNL.Size = new System.Drawing.Size(281, 30);
+            this.txtNL.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 255);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(189, 57);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Nhập lại Password: ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -202,7 +220,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 385);
+            this.label3.Location = new System.Drawing.Point(11, 377);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 36);
             this.label3.TabIndex = 3;
@@ -212,7 +230,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 327);
+            this.label1.Location = new System.Drawing.Point(42, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 36);
             this.label1.TabIndex = 1;
@@ -257,24 +275,6 @@
             this.btnDK1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDK1.UseVisualStyleBackColor = false;
             this.btnDK1.Click += new System.EventHandler(this.btnDK1_Click);
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 255);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 57);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Nhập lại Password: ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNL
-            // 
-            this.txtNL.Location = new System.Drawing.Point(222, 267);
-            this.txtNL.Name = "txtNL";
-            this.txtNL.PasswordChar = '*';
-            this.txtNL.Size = new System.Drawing.Size(281, 30);
-            this.txtNL.TabIndex = 23;
             // 
             // fDangky
             // 

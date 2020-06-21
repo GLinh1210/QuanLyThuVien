@@ -53,7 +53,7 @@
             this.btnSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSach.Location = new System.Drawing.Point(158, 278);
             this.btnSach.Name = "btnSach";
-            this.btnSach.Size = new System.Drawing.Size(122, 94);
+            this.btnSach.Size = new System.Drawing.Size(107, 94);
             this.btnSach.TabIndex = 0;
             this.btnSach.Text = "Quản Lý Sách";
             this.btnSach.UseVisualStyleBackColor = false;
@@ -66,7 +66,7 @@
             this.btnDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDG.Location = new System.Drawing.Point(806, 278);
             this.btnDG.Name = "btnDG";
-            this.btnDG.Size = new System.Drawing.Size(122, 94);
+            this.btnDG.Size = new System.Drawing.Size(99, 94);
             this.btnDG.TabIndex = 1;
             this.btnDG.Text = "Quản Lý Độc Giả";
             this.btnDG.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             this.btnMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMuon.Location = new System.Drawing.Point(373, 278);
             this.btnMuon.Name = "btnMuon";
-            this.btnMuon.Size = new System.Drawing.Size(122, 94);
+            this.btnMuon.Size = new System.Drawing.Size(111, 94);
             this.btnMuon.TabIndex = 2;
             this.btnMuon.Text = "Quản Lý Mượn Sách";
             this.btnMuon.UseVisualStyleBackColor = false;
@@ -92,7 +92,7 @@
             this.btnTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTra.Location = new System.Drawing.Point(574, 278);
             this.btnTra.Name = "btnTra";
-            this.btnTra.Size = new System.Drawing.Size(122, 94);
+            this.btnTra.Size = new System.Drawing.Size(105, 94);
             this.btnTra.TabIndex = 3;
             this.btnTra.Text = "Quản Lý Trả Sách";
             this.btnTra.UseVisualStyleBackColor = false;
@@ -120,7 +120,7 @@
             this.btnDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMK.Location = new System.Drawing.Point(373, 87);
             this.btnDoiMK.Name = "btnDoiMK";
-            this.btnDoiMK.Size = new System.Drawing.Size(122, 94);
+            this.btnDoiMK.Size = new System.Drawing.Size(111, 94);
             this.btnDoiMK.TabIndex = 5;
             this.btnDoiMK.Text = "Đổi mật khẩu";
             this.btnDoiMK.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             this.btnThaydoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThaydoi.Location = new System.Drawing.Point(574, 87);
             this.btnThaydoi.Name = "btnThaydoi";
-            this.btnThaydoi.Size = new System.Drawing.Size(122, 94);
+            this.btnThaydoi.Size = new System.Drawing.Size(105, 94);
             this.btnThaydoi.TabIndex = 6;
             this.btnThaydoi.Text = "Thay đổi thông tin";
             this.btnThaydoi.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             this.btnMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMT.Location = new System.Drawing.Point(806, 87);
             this.btnMT.Name = "btnMT";
-            this.btnMT.Size = new System.Drawing.Size(122, 94);
+            this.btnMT.Size = new System.Drawing.Size(99, 94);
             this.btnMT.TabIndex = 7;
             this.btnMT.Text = "Thông tin mượn trả";
             this.btnMT.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@
             this.btnTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTSach.Location = new System.Drawing.Point(158, 87);
             this.btnTSach.Name = "btnTSach";
-            this.btnTSach.Size = new System.Drawing.Size(122, 94);
+            this.btnTSach.Size = new System.Drawing.Size(107, 94);
             this.btnTSach.TabIndex = 8;
             this.btnTSach.Text = "Tra cứu sách";
             this.btnTSach.UseVisualStyleBackColor = false;

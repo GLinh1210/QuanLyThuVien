@@ -30,29 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
-            this.pHIEUMUONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pHIEUMUONTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUMUONTableAdapter();
-            this.pHIEUTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pHIEUTRATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUTRATableAdapter();
             this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDocGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayMuonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayPhaiTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHIEUMUONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new QuanLyThuVien.QuanLyThuVienDataSet();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.maPhieuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maDocGiaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSachDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayTraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHIEUTRABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.pHIEUMUONTableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUMUONTableAdapter();
+            this.pHIEUTRATableAdapter = new QuanLyThuVien.QuanLyThuVienDataSetTableAdapters.PHIEUTRATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(824, 163);
             this.dataGridView1.TabIndex = 0;
             // 
+            // maPhieuDataGridViewTextBoxColumn
+            // 
+            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã Phiếu";
+            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            // 
+            // maDocGiaDataGridViewTextBoxColumn
+            // 
+            this.maDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaDocGia";
+            this.maDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã Độc Giả";
+            this.maDocGiaDataGridViewTextBoxColumn.Name = "maDocGiaDataGridViewTextBoxColumn";
+            // 
+            // maSachDataGridViewTextBoxColumn
+            // 
+            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
+            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
+            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
+            // 
+            // ngayMuonDataGridViewTextBoxColumn
+            // 
+            this.ngayMuonDataGridViewTextBoxColumn.DataPropertyName = "NgayMuon";
+            this.ngayMuonDataGridViewTextBoxColumn.HeaderText = "Ngày Mượn";
+            this.ngayMuonDataGridViewTextBoxColumn.Name = "ngayMuonDataGridViewTextBoxColumn";
+            // 
+            // ngayPhaiTraDataGridViewTextBoxColumn
+            // 
+            this.ngayPhaiTraDataGridViewTextBoxColumn.DataPropertyName = "NgayPhaiTra";
+            this.ngayPhaiTraDataGridViewTextBoxColumn.HeaderText = "Ngày Phải Trả";
+            this.ngayPhaiTraDataGridViewTextBoxColumn.Name = "ngayPhaiTraDataGridViewTextBoxColumn";
+            // 
+            // pHIEUMUONBindingSource
+            // 
+            this.pHIEUMUONBindingSource.DataMember = "PHIEUMUON";
+            this.pHIEUMUONBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -93,6 +133,35 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(824, 162);
             this.dataGridView2.TabIndex = 1;
+            // 
+            // maPhieuDataGridViewTextBoxColumn1
+            // 
+            this.maPhieuDataGridViewTextBoxColumn1.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn1.HeaderText = "Mã Phiếu";
+            this.maPhieuDataGridViewTextBoxColumn1.Name = "maPhieuDataGridViewTextBoxColumn1";
+            // 
+            // maDocGiaDataGridViewTextBoxColumn1
+            // 
+            this.maDocGiaDataGridViewTextBoxColumn1.DataPropertyName = "MaDocGia";
+            this.maDocGiaDataGridViewTextBoxColumn1.HeaderText = "Mã Độc Giả";
+            this.maDocGiaDataGridViewTextBoxColumn1.Name = "maDocGiaDataGridViewTextBoxColumn1";
+            // 
+            // maSachDataGridViewTextBoxColumn1
+            // 
+            this.maSachDataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
+            this.maSachDataGridViewTextBoxColumn1.HeaderText = "Mã Sách";
+            this.maSachDataGridViewTextBoxColumn1.Name = "maSachDataGridViewTextBoxColumn1";
+            // 
+            // ngayTraDataGridViewTextBoxColumn
+            // 
+            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
+            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "Ngày Trả";
+            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
+            // 
+            // pHIEUTRABindingSource
+            // 
+            this.pHIEUTRABindingSource.DataMember = "PHIEUTRA";
+            this.pHIEUTRABindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
             // label1
             // 
@@ -129,90 +198,24 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(334, 484);
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.BackgroundImage = global::QuanLyThuVien.Properties.Resources._31;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Location = new System.Drawing.Point(360, 484);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(81, 56);
+            this.btnThoat.Size = new System.Drawing.Size(69, 56);
             this.btnThoat.TabIndex = 5;
-            this.btnThoat.Text = "Quay Lại";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pHIEUMUONBindingSource
-            // 
-            this.pHIEUMUONBindingSource.DataMember = "PHIEUMUON";
-            this.pHIEUMUONBindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
             // pHIEUMUONTableAdapter
             // 
             this.pHIEUMUONTableAdapter.ClearBeforeFill = true;
             // 
-            // pHIEUTRABindingSource
-            // 
-            this.pHIEUTRABindingSource.DataMember = "PHIEUTRA";
-            this.pHIEUTRABindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // pHIEUTRATableAdapter
             // 
             this.pHIEUTRATableAdapter.ClearBeforeFill = true;
-            // 
-            // maPhieuDataGridViewTextBoxColumn
-            // 
-            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
-            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã Phiếu";
-            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
-            // 
-            // maDocGiaDataGridViewTextBoxColumn
-            // 
-            this.maDocGiaDataGridViewTextBoxColumn.DataPropertyName = "MaDocGia";
-            this.maDocGiaDataGridViewTextBoxColumn.HeaderText = "Mã Độc Giả";
-            this.maDocGiaDataGridViewTextBoxColumn.Name = "maDocGiaDataGridViewTextBoxColumn";
-            // 
-            // maSachDataGridViewTextBoxColumn
-            // 
-            this.maSachDataGridViewTextBoxColumn.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn.HeaderText = "Mã Sách";
-            this.maSachDataGridViewTextBoxColumn.Name = "maSachDataGridViewTextBoxColumn";
-            // 
-            // ngayMuonDataGridViewTextBoxColumn
-            // 
-            this.ngayMuonDataGridViewTextBoxColumn.DataPropertyName = "NgayMuon";
-            this.ngayMuonDataGridViewTextBoxColumn.HeaderText = "Ngày Mượn";
-            this.ngayMuonDataGridViewTextBoxColumn.Name = "ngayMuonDataGridViewTextBoxColumn";
-            // 
-            // ngayPhaiTraDataGridViewTextBoxColumn
-            // 
-            this.ngayPhaiTraDataGridViewTextBoxColumn.DataPropertyName = "NgayPhaiTra";
-            this.ngayPhaiTraDataGridViewTextBoxColumn.HeaderText = "Ngày Phải Trả";
-            this.ngayPhaiTraDataGridViewTextBoxColumn.Name = "ngayPhaiTraDataGridViewTextBoxColumn";
-            // 
-            // maPhieuDataGridViewTextBoxColumn1
-            // 
-            this.maPhieuDataGridViewTextBoxColumn1.DataPropertyName = "MaPhieu";
-            this.maPhieuDataGridViewTextBoxColumn1.HeaderText = "Mã Phiếu";
-            this.maPhieuDataGridViewTextBoxColumn1.Name = "maPhieuDataGridViewTextBoxColumn1";
-            // 
-            // maDocGiaDataGridViewTextBoxColumn1
-            // 
-            this.maDocGiaDataGridViewTextBoxColumn1.DataPropertyName = "MaDocGia";
-            this.maDocGiaDataGridViewTextBoxColumn1.HeaderText = "Mã Độc Giả";
-            this.maDocGiaDataGridViewTextBoxColumn1.Name = "maDocGiaDataGridViewTextBoxColumn1";
-            // 
-            // maSachDataGridViewTextBoxColumn1
-            // 
-            this.maSachDataGridViewTextBoxColumn1.DataPropertyName = "MaSach";
-            this.maSachDataGridViewTextBoxColumn1.HeaderText = "Mã Sách";
-            this.maSachDataGridViewTextBoxColumn1.Name = "maSachDataGridViewTextBoxColumn1";
-            // 
-            // ngayTraDataGridViewTextBoxColumn
-            // 
-            this.ngayTraDataGridViewTextBoxColumn.DataPropertyName = "NgayTra";
-            this.ngayTraDataGridViewTextBoxColumn.HeaderText = "Ngày Trả";
-            this.ngayTraDataGridViewTextBoxColumn.Name = "ngayTraDataGridViewTextBoxColumn";
             // 
             // TTMT
             // 
@@ -231,9 +234,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TTMT_FormClosing);
             this.Load += new System.EventHandler(this.TTMT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUTRABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

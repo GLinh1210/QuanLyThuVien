@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtNS = new System.Windows.Forms.DateTimePicker();
+            this.rbtnNu = new System.Windows.Forms.RadioButton();
+            this.rbtnNam = new System.Windows.Forms.RadioButton();
+            this.txtDC = new System.Windows.Forms.TextBox();
+            this.txtHT = new System.Windows.Forms.TextBox();
             this.btnCN = new System.Windows.Forms.Button();
             this.btnT = new System.Windows.Forms.Button();
-            this.txtHT = new System.Windows.Forms.TextBox();
-            this.txtDC = new System.Windows.Forms.TextBox();
-            this.rbtnNam = new System.Windows.Forms.RadioButton();
-            this.rbtnNu = new System.Windows.Forms.RadioButton();
-            this.dtNS = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,57 +61,66 @@
             this.panel1.Size = new System.Drawing.Size(631, 444);
             this.panel1.TabIndex = 0;
             // 
-            // btnCN
+            // label1
             // 
-            this.btnCN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCN.Location = new System.Drawing.Point(150, 474);
-            this.btnCN.Name = "btnCN";
-            this.btnCN.Size = new System.Drawing.Size(75, 64);
-            this.btnCN.TabIndex = 0;
-            this.btnCN.Text = "Cập nhật";
-            this.btnCN.UseVisualStyleBackColor = true;
-            this.btnCN.Click += new System.EventHandler(this.btnCN_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(340, 29);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Thay Đổi Thông Tin Cá Nhân";
             // 
-            // btnT
+            // label6
             // 
-            this.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnT.Location = new System.Drawing.Point(410, 474);
-            this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(75, 64);
-            this.btnT.TabIndex = 1;
-            this.btnT.Text = "Thoát";
-            this.btnT.UseVisualStyleBackColor = true;
-            this.btnT.Click += new System.EventHandler(this.btnT_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 256);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 25);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Địa Chỉ";
             // 
-            // txtHT
+            // label5
             // 
-            this.txtHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHT.Location = new System.Drawing.Point(194, 111);
-            this.txtHT.Name = "txtHT";
-            this.txtHT.Size = new System.Drawing.Size(219, 26);
-            this.txtHT.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 330);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 25);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Năm Sinh";
             // 
-            // txtDC
+            // label4
             // 
-            this.txtDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDC.Location = new System.Drawing.Point(194, 255);
-            this.txtDC.Name = "txtDC";
-            this.txtDC.Size = new System.Drawing.Size(219, 26);
-            this.txtDC.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 184);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 25);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Giới Tính";
             // 
-            // rbtnNam
+            // label3
             // 
-            this.rbtnNam.AutoSize = true;
-            this.rbtnNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNam.Location = new System.Drawing.Point(194, 186);
-            this.rbtnNam.Name = "rbtnNam";
-            this.rbtnNam.Size = new System.Drawing.Size(65, 24);
-            this.rbtnNam.TabIndex = 15;
-            this.rbtnNam.TabStop = true;
-            this.rbtnNam.Text = "Nam";
-            this.rbtnNam.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 25);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Họ và Tên";
+            // 
+            // dtNS
+            // 
+            this.dtNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNS.Location = new System.Drawing.Point(194, 329);
+            this.dtNS.MaxDate = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
+            this.dtNS.Name = "dtNS";
+            this.dtNS.Size = new System.Drawing.Size(200, 26);
+            this.dtNS.TabIndex = 17;
+            this.dtNS.Value = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
             // 
             // rbtnNu
             // 
@@ -125,66 +134,59 @@
             this.rbtnNu.Text = "Nữ";
             this.rbtnNu.UseVisualStyleBackColor = true;
             // 
-            // dtNS
+            // rbtnNam
             // 
-            this.dtNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNS.Location = new System.Drawing.Point(194, 329);
-            this.dtNS.MaxDate = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
-            this.dtNS.Name = "dtNS";
-            this.dtNS.Size = new System.Drawing.Size(200, 26);
-            this.dtNS.TabIndex = 17;
-            this.dtNS.Value = new System.DateTime(2020, 6, 17, 0, 0, 0, 0);
+            this.rbtnNam.AutoSize = true;
+            this.rbtnNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNam.Location = new System.Drawing.Point(194, 186);
+            this.rbtnNam.Name = "rbtnNam";
+            this.rbtnNam.Size = new System.Drawing.Size(65, 24);
+            this.rbtnNam.TabIndex = 15;
+            this.rbtnNam.TabStop = true;
+            this.rbtnNam.Text = "Nam";
+            this.rbtnNam.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtDC
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 25);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Họ và Tên";
+            this.txtDC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDC.Location = new System.Drawing.Point(194, 255);
+            this.txtDC.Name = "txtDC";
+            this.txtDC.Size = new System.Drawing.Size(219, 26);
+            this.txtDC.TabIndex = 1;
             // 
-            // label4
+            // txtHT
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 25);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Giới Tính";
+            this.txtHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHT.Location = new System.Drawing.Point(194, 111);
+            this.txtHT.Name = "txtHT";
+            this.txtHT.Size = new System.Drawing.Size(219, 26);
+            this.txtHT.TabIndex = 0;
             // 
-            // label5
+            // btnCN
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 25);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Năm Sinh";
+            this.btnCN.BackgroundImage = global::QuanLyThuVien.Properties.Resources.Floppy_disk_512;
+            this.btnCN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCN.Location = new System.Drawing.Point(150, 467);
+            this.btnCN.Name = "btnCN";
+            this.btnCN.Size = new System.Drawing.Size(84, 71);
+            this.btnCN.TabIndex = 0;
+            this.btnCN.UseVisualStyleBackColor = true;
+            this.btnCN.Click += new System.EventHandler(this.btnCN_Click);
             // 
-            // label6
+            // btnT
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 256);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 25);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Địa Chỉ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(144, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 29);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Thay Đổi Thông Tin Cá Nhân";
+            this.btnT.BackgroundImage = global::QuanLyThuVien.Properties.Resources._31;
+            this.btnT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT.Location = new System.Drawing.Point(388, 467);
+            this.btnT.Name = "btnT";
+            this.btnT.Size = new System.Drawing.Size(81, 71);
+            this.btnT.TabIndex = 1;
+            this.btnT.UseVisualStyleBackColor = true;
+            this.btnT.Click += new System.EventHandler(this.btnT_Click);
             // 
             // ThayDoiTT
             // 
