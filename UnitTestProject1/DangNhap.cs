@@ -27,7 +27,7 @@ namespace TestDangNhapvaDangKy
         [TestMethod]
         public void DNUser()
         {
-            Assert.AreEqual(dn.login("Linhle", "123L"), true);
+            Assert.AreEqual(dn.login("KimNgan", "123N"), true);
         }
         [TestMethod]
         public void ThieuTDN()
@@ -42,12 +42,12 @@ namespace TestDangNhapvaDangKy
         [TestMethod]
         public void DNSaiMK()
         {
-            Assert.AreEqual(dn.login("Linhle123", "123"), false);
+            Assert.AreEqual(dn.login("ThuyTrinh", "123"), false);
         }
         [TestMethod]
         public void DNSaiTDN()
         {
-            Assert.AreEqual(dn.login("linhle1", "L123"), false);
+            Assert.AreEqual(dn.login("ThuyTrinh123", "123T"), false);
         }
         
     }

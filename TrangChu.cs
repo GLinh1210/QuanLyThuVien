@@ -30,6 +30,8 @@ namespace QuanLyThuVien
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+            fLogin lg = new fLogin();
+            lg.Show();
         }
 
         private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
